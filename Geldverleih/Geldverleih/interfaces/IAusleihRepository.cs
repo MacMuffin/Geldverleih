@@ -1,6 +1,6 @@
 ﻿using Geldverleih.Domain;
 
-namespace Geldverleih.Repository
+namespace Geldverleih.Repository.interfaces
 {
     public interface IAusleihRepository
     {
