@@ -1,0 +1,13 @@
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.UI.exe
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.UI.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\MainWindow.baml
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\MainWindow.g.cs
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\App.g.cs
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\Geldverleih.UI_MarkupCompile.cache
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\Geldverleih.UI.g.resources
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\Geldverleih.UI.Properties.Resources.resources
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\Geldverleih.UI.exe
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\Geldverleih.UI.pdb
