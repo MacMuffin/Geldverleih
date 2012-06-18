@@ -1,8 +1,10 @@
 ﻿<Window x:Class="Geldverleih.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Geldverleih" Height="516" Width="846">
     <Grid>
-        
+        <StatusBar Height="23" HorizontalAlignment="Left" Margin="0,454,0,0" Name="statusBar1" VerticalAlignment="Top" Width="834" Background="Olive">
+            <StatusBarItem Content="Konto: " />
+        </StatusBar>
     </Grid>
 </Window>
