@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="DCE288BA-22C3-4590-8F1E-0134A6760EFF" ModuleId="Geldverleih" />
+  <Module PersistentId="169EB44A-664C-4300-9FCA-5C6525389F9F" ModuleId="Geldverleih.Domain" />
+</Modules>

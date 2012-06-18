@@ -1,0 +1,5 @@
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\bin\Debug\Geldverleih.Domain.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\bin\Debug\Geldverleih.Domain.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\obj\Debug\ResolveAssemblyReference.cache
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\obj\Debug\Geldverleih.Domain.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\obj\Debug\Geldverleih.Domain.pdb
