@@ -7,23 +7,22 @@ namespace Geldverleih.Domain
 {
     public class Kunde
     {
-        public Guid Kundennummer { get; private set; }
-        public string Name { get; private set; }
-        public string Vorname { get; private set; }
-        public string Adresse { get; private set; }
-        public int PLZ { get; private set; }
-        public string Wohnort { get; private set; }
-        public float Kontostand { get; private set; }
+        public Guid Kundennummer { get; set; }
+        public string Name { get; set; }
+        public string Vorname { get; set; }
+        public string Adresse { get; set; }
+        public int PLZ { get; set; }
+        public string Wohnort { get; set; }
+        public float Kontostand { get; set; }
 
-        public Kunde(Guid kundennummer, string name, string vorname, string adresse, int plz, string wohnort, float kontostand)
+        public Kunde()
         {
-            Kundennummer = kundennummer;
-            Name = name;
-            Vorname = vorname;
-            Adresse = adresse;
-            PLZ = plz;
-            Wohnort = wohnort;
-            Kontostand = kontostand;
+            Kundennummer = Guid.NewGuid();
+            Name = "";
+            Vorname = "";
+            Adresse = "";
+            Wohnort = "";
+            Kontostand = 0.0f;
         }
     }
 }
