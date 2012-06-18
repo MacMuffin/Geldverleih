@@ -49,5 +49,27 @@ namespace Geldverleih.Tests
 
             Assert.IsNotNull(bankmanager);
         }
+
+        [TestMethod]
+        public void RueckgabeWirdInsRepositoryGeschrieben()
+        {
+
+            IAusleihRepository ausleihRepository = _mockRepository.StrictMock<IAusleihRepository>();
+            IBankService bankmanager = _mockRepository.StrictMock<IBankService>();
+
+            Kunde kunde = new Kunde();
+
+            using (_mockRepository.Record())
+            {
+                Expect.Call(() => bankmanager.GeldEinzahlen(kunde, (decimal) 5.5));
+                Expect.Call(() => ausleihRepository.KundeZahltGeldEin(kunde, (decimal) 5.5));
+            }
+
+            _mockRepository.ReplayAll();
+
+            bankmanager.GeldEinzahlen(kunde, (decimal) 5.5);
+
+            Assert.IsNotNull(bankmanager);
+        }
     }
 }
