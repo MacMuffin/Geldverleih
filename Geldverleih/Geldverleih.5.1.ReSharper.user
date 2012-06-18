@@ -9,16 +9,29 @@
   <RecentFiles>
     <RecentFiles>
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="54" fromTop="1" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="163" fromTop="9" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:IKundenRepository.cs" caret="236" fromTop="9" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:IAusleihRepository.cs" caret="207" fromTop="7" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IKundenRepository.cs" caret="188" fromTop="6" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="218" fromTop="7" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="457" fromTop="8" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="256" fromTop="7" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="311" fromTop="9" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:UnitTest1.cs" caret="483" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:IKundenRepository.cs" caret="96" fromTop="0" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="163" fromTop="9" />
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="53" fromTop="1" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:IKundenRepository.cs" caret="236" fromTop="9" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:IAusleihRepository.cs" caret="197" fromTop="5" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IKundenRepository.cs" caret="247" fromTop="9" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="208" fromTop="5" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="51" fromTop="1" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IKundenRepository.cs" caret="89" fromTop="2" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="419" fromTop="14" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="693" fromTop="25" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="681" fromTop="17" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="489" fromTop="10" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="457" fromTop="8" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="53" fromTop="1" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="256" fromTop="7" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:UnitTest1.cs" caret="512" fromTop="14" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="160" fromTop="5" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:UnitTest1.cs" caret="483" fromTop="17" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -34,12 +47,28 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="void" priority="1" />
-      <Item value="public" priority="1" />
-      <Item value="interface" priority="0" />
-      <Item value="Kunde`0" priority="0" />
+      <Item value="void" priority="3" />
+      <Item value="public" priority="2" />
+      <Item value="interface" priority="2" />
+      <Item value="Kunde`0" priority="1" />
       <Item value="leihVereinbarung" priority="0" />
       <Item value="class" priority="0" />
+      <Item value="prop" priority="0" />
+      <Item value="Guid`0" priority="1" />
+      <Item value="kunde" priority="0" />
+      <Item value="VerleihKondition`0" priority="0" />
+      <Item value="verleihKondition" priority="0" />
+      <Item value="decimal" priority="0" />
+      <Item value="bankmanager" priority="1" />
+      <Item value="new" priority="0" />
+      <Item value="IBankmanager" priority="0" />
+      <Item value="Assert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="IsNotNull`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

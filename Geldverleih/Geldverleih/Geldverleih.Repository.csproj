@@ -46,8 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAusleihRepository.cs" />
-    <Compile Include="IKundenRepository.cs" />
+    <Compile Include="AusleihRepository.cs" />
+    <Compile Include="interfaces\IAusleihRepository.cs" />
+    <Compile Include="interfaces\IKundenRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

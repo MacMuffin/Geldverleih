@@ -1,0 +1,13 @@
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Tests.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Tests.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Service.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Domain.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Service.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Domain.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\obj\Debug\ResolveAssemblyReference.cache
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\obj\Debug\Geldverleih.Tests.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\obj\Debug\Geldverleih.Tests.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Repository.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Rhino.Mocks.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Repository.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Rhino.Mocks.xml

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Geldverleih.Domain;
+﻿using Geldverleih.Domain;
 
-namespace Geldverleih.Service
+namespace Geldverleih.Service.interfaces
 {
     public interface IBankService
     {

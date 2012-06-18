@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ed1578ba-5446-4db0-b5c5-73592675e8e4" name="Andy@ANDY-PC 2012-06-18 19:10:18" runUser="Andy-PC\Andy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="1e8110a4-fe86-41b2-aba8-127e0f01dea9">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Andy_ANDY-PC 2012-06-18 19_10_18">
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Service\bin\Debug\Geldverleih.Service.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih\bin\Debug\Geldverleih.Repository.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\bin\Debug\Geldverleih.Domain.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-18T19:10:18.7312085+02:00" queuing="2012-06-18T19:10:18.7372088+02:00" start="2012-06-18T19:10:18.7442092+02:00" finish="2012-06-18T19:10:19.2362323+02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AusleihvorgangWirdInsRepositoryGeschrieben" storage="e:\git\schule\geldverleih\geldverleih\geldverleih.tests\bin\debug\geldverleih.tests.dll" id="2c96dbd8-c26f-b555-2b6e-9317cd39ec32">
+      <Execution id="c2a2be1a-c660-4942-a53f-539fb0cdb9e1" />
+      <TestMethod codeBase="E:/Git/Schule/GeldVerleih/Geldverleih/Geldverleih.Tests/bin/Debug/Geldverleih.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Geldverleih.Tests.BankserviceTest, Geldverleih.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AusleihvorgangWirdInsRepositoryGeschrieben" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="2c96dbd8-c26f-b555-2b6e-9317cd39ec32" executionId="c2a2be1a-c660-4942-a53f-539fb0cdb9e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c2a2be1a-c660-4942-a53f-539fb0cdb9e1" testId="2c96dbd8-c26f-b555-2b6e-9317cd39ec32" testName="AusleihvorgangWirdInsRepositoryGeschrieben" computerName="ANDY-PC" duration="00:00:00.2383288" startTime="2012-06-18T19:10:18.7542098+02:00" endTime="2012-06-18T19:10:19.2162323+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2a2be1a-c660-4942-a53f-539fb0cdb9e1">
+      <Output>
+        <ErrorInfo>
+          <Message>Die Geldverleih.Tests.BankserviceTest.AusleihvorgangWirdInsRepositoryGeschrieben-Testmethode hat eine Ausnahme ausgelöst: Rhino.Mocks.Exceptions.ExpectationViolationException: IBankService.GeldAusleihen(Geldverleih.Domain.Kunde, Geldverleih.Domain.VerleihKondition); Expected #0, Actual #1.</Message>
+          <StackTrace>    bei Rhino.Mocks.MethodRecorders.UnorderedMethodRecorder.DoGetRecordedExpectation(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   bei Rhino.Mocks.MethodRecorders.MethodRecorderBase.GetRecordedExpectation(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   bei Rhino.Mocks.Impl.ReplayMockState.DoMethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   bei Rhino.Mocks.Impl.ReplayMockState.MethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   bei Rhino.Mocks.MockRepository.MethodCall(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   bei Rhino.Mocks.Impl.Invocation.Actions.RegularInvocation.PerformAgainst(IInvocation invocation)
+   bei Rhino.Mocks.Impl.RhinoInterceptor.Intercept(IInvocation invocation)
+   bei Castle.DynamicProxy.AbstractInvocation.Proceed()
+   bei Castle.Proxies.IBankServiceProxy47231e62132e4960a5d00dc4421c35b8.IBankService.GeldAusleihen(Kunde kunde, VerleihKondition verleihKondition)
+   bei Geldverleih.Tests.BankserviceTest.AusleihvorgangWirdInsRepositoryGeschrieben() in E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\BankserviceTest.cs:Zeile 49.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

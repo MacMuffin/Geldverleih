@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>af0858ca-d9f1-48b1-a701-b2583f27132a</ProjectGuid>
+    <ProjectGuid>{C0408460-75D0-460E-8AB0-2EB5C523FF92}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Geldverleih.Service</RootNamespace>
@@ -40,8 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BankService.cs" />
+    <Compile Include="interfaces\IBankService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Geldverleih.Domain\Geldverleih.Domain.csproj">
+      <Project>{169EB44A-664C-4300-9FCA-5C6525389F9F}</Project>
+      <Name>Geldverleih.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Geldverleih\Geldverleih.Repository.csproj">
+      <Project>{DCE288BA-22C3-4590-8F1E-0134A6760EFF}</Project>
+      <Name>Geldverleih.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
