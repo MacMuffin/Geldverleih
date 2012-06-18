@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                           assembly="Geldverleih.Domain"
+                           namespace="Geldverleih.Domain">
+  <class name="Kunde"
+        table="T_Kunde">
+    <id name="Kundennummer">
+      <generator class="identity"/>
+    </id>
+    <property name="Name" />
+    <property name="Vorname" />
+    <property name="Adresse" />
+    <property name="PLZ" />
+    <property name="Wohnort" />
+    <property name="Kontostand" />
+  </class>
+</hibernate-mapping>
