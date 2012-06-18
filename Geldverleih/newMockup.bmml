@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" measuredW="1279" measuredH="576" mockupW="1242" mockupH="547">
+<mockup version="1.0" skin="sketch" measuredW="1279" measuredH="771" mockupW="1242" mockupH="742">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::TabBar" x="67" y="90" w="689" h="404" measuredW="205" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
@@ -113,6 +113,16 @@
     <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="1091" y="327" w="-1" h="-1" measuredW="54" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Zinssatz</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::TextArea" x="892" y="517" w="244" h="254" measuredW="200" measuredH="140" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Derzeit%20verliehenes%20Geld%3A%2027433%2C37%20%u20AC%0A%20%0A%20%0AEingenommene%20Zinsen%3A%0AGesamt%3A%201337%u20AC%0ADiesen%20Monat%3A%20123%u20AC%0ADiese%20Woche%3A%2015%u20AC%0AHeute%3A%202%2C5%u20AC%0A%20%0AAusstehend%3A%20776%u20AC%0A%20%0A%20%0ANicht%20zur%FCckgezahlte%20Ausleihen%3A%2023%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::SubTitle" x="888" y="484" w="-1" h="-1" measuredW="117" measuredH="33" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Statistiken</text>
       </controlProperties>
     </control>
   </controls>
