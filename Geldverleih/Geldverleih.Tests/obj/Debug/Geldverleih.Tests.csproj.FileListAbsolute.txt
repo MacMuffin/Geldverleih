@@ -11,3 +11,7 @@ E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Re
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Rhino.Mocks.dll
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Repository.pdb
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Rhino.Mocks.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\NHibernate.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Iesi.Collections.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\NHibernate.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Iesi.Collections.xml

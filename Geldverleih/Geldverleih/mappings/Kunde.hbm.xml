@@ -4,14 +4,12 @@
                            namespace="Geldverleih.Domain">
   <class name="Kunde"
         table="T_Kunde">
-    <id name="Kundennummer">
-      <generator class="identity"/>
+    <id name="Kundennummer" column="KD_Nr">
     </id>
-    <property name="Name" />
-    <property name="Vorname" />
-    <property name="Adresse" />
-    <property name="PLZ" />
-    <property name="Wohnort" />
-    <property name="Kontostand" />
+    <property name="Name" column="KD_Name"/>
+    <property name="Vorname" column="KD_Vorname"/>
+    <property name="Adresse" column="KD_Adresse"/>
+    <property name="PLZ" column="KD_PLZ"/>
+    <property name="Wohnort" column="KD_WohnOrt"/>
   </class>
 </hibernate-mapping>

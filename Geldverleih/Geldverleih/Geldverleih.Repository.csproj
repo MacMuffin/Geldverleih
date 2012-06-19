@@ -49,8 +49,10 @@
     <Compile Include="AusleihRepository.cs" />
     <Compile Include="interfaces\IAusleihRepository.cs" />
     <Compile Include="interfaces\IKundenRepository.cs" />
+    <Compile Include="interfaces\IRepository.cs" />
     <Compile Include="KundenRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Geldverleih.Domain\Geldverleih.Domain.csproj">

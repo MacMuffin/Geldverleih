@@ -8,35 +8,55 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="54" fromTop="1" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="256" fromTop="7" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="745" fromTop="22" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1952" fromTop="24" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="381" fromTop="4" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="102" fromTop="4" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:mappings/f:Kunde.hbm.xml" caret="394" fromTop="9" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:KundenrepositoryTest.cs" caret="457" fromTop="16" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="127" fromTop="5" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:KundenService.cs" caret="695" fromTop="23" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IKundenService.cs" caret="234" fromTop="7" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="241" fromTop="7" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:KundenPresenter.cs" caret="1051" fromTop="10" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="294" fromTop="7" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1035" fromTop="28" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="113" fromTop="4" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:AusleihRepository.cs" caret="396" fromTop="12" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1803" fromTop="15" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:BankPresenter.cs" caret="700" fromTop="24" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:AusleihError.cs" caret="138" fromTop="5" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:EinzahlError.cs" caret="147" fromTop="6" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:EinzahlResult.cs" caret="274" fromTop="7" />
     </RecentFiles>
     <RecentEdits>
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="53" fromTop="1" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="419" fromTop="14" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="693" fromTop="25" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="681" fromTop="17" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="489" fromTop="10" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="457" fromTop="8" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="53" fromTop="1" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="256" fromTop="7" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="650" fromTop="10" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="292" fromTop="10" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="527" fromTop="17" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="745" fromTop="22" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="486" fromTop="16" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1624" fromTop="34" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1071" fromTop="19" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1441" fromTop="27" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1679" fromTop="17" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2190" fromTop="29" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1950" fromTop="23" />
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2314" fromTop="33" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="381" fromTop="4" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2158" fromTop="23" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:KundenPresenter.cs" caret="370" fromTop="11" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="124" fromTop="5" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1724" fromTop="28" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1724" fromTop="21" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:KundenPresenter.cs" caret="232" fromTop="7" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:KundenPresenter.cs" caret="60" fromTop="0" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IKundenService.cs" caret="234" fromTop="7" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:KundenService.cs" caret="695" fromTop="23" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:KundenPresenter.cs" caret="1051" fromTop="33" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="241" fromTop="7" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="122" fromTop="3" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:KundenPresenter.cs" caret="1051" fromTop="10" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1715" fromTop="39" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="294" fromTop="7" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1143" fromTop="33" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1690" fromTop="45" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1503" fromTop="40" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="192" fromTop="6" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1035" fromTop="28" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:AusleihRepository.cs" caret="246" fromTop="7" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:AusleihRepository.cs" caret="396" fromTop="12" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1548" fromTop="26" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1688" fromTop="31" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2283" fromTop="28" />
+      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2520" fromTop="34" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:BankPresenter.cs" caret="372" fromTop="14" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:BankPresenter.cs" caret="700" fromTop="24" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:EinzahlError.cs" caret="147" fromTop="6" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:EinzahlResult.cs" caret="250" fromTop="5" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -52,44 +72,81 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="void" priority="4" />
-      <Item value="public" priority="3" />
+      <Item value="void" priority="10" />
+      <Item value="public" priority="18" />
       <Item value="interface" priority="2" />
-      <Item value="Kunde`0" priority="2" />
+      <Item value="Kunde`0" priority="5" />
       <Item value="leihVereinbarung" priority="0" />
-      <Item value="class" priority="0" />
-      <Item value="prop" priority="0" />
-      <Item value="Guid`0" priority="1" />
-      <Item value="kunde" priority="6" />
-      <Item value="VerleihKondition`0" priority="0" />
+      <Item value="class" priority="6" />
+      <Item value="prop" priority="4" />
+      <Item value="Guid`0" priority="5" />
+      <Item value="kunde" priority="15" />
+      <Item value="VerleihKondition`0" priority="1" />
       <Item value="verleihKondition" priority="6" />
-      <Item value="decimal" priority="3" />
+      <Item value="decimal" priority="10" />
       <Item value="bankmanager" priority="7" />
-      <Item value="new" priority="4" />
+      <Item value="new" priority="8" />
       <Item value="IBankmanager" priority="0" />
-      <Item value="Assert`0" priority="0" />
-      <Item value="ctor" priority="0" />
+      <Item value="Assert`0" priority="1" />
+      <Item value="ctor" priority="1" />
       <Item value="ausleihRepository" priority="5" />
       <Item value="IAusleihRepository" priority="0" />
       <Item value="AusleihRepository" priority="0" />
       <Item value="_ausleihRepository" priority="1" />
-      <Item value="betrag" priority="0" />
+      <Item value="betrag" priority="2" />
       <Item value="MockRepository" priority="1" />
       <Item value="_mockRepository" priority="6" />
       <Item value="IAusleihRepository`0" priority="2" />
-      <Item value="IBankService`0" priority="1" />
+      <Item value="IBankService`0" priority="2" />
       <Item value="using" priority="0" />
-      <Item value="Kunde" priority="0" />
+      <Item value="Kunde" priority="1" />
       <Item value="VerleihKondition" priority="0" />
       <Item value="Expect`0" priority="0" />
       <Item value="Navy" priority="0" />
       <Item value="Olive" priority="0" />
+      <Item value="IKundenRepository`0" priority="4" />
+      <Item value="kundenRepository" priority="3" />
+      <Item value="_kundenRepository" priority="1" />
+      <Item value="if" priority="0" />
+      <Item value="alleKunden" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="Exception" priority="0" />
+      <Item value="TestClass" priority="0" />
+      <Item value="TestMethod" priority="0" />
+      <Item value="KundenRepository`0" priority="0" />
+      <Item value="virtual" priority="0" />
+      <Item value="vorgangsNummer" priority="4" />
+      <Item value="string" priority="3" />
+      <Item value="int" priority="0" />
+      <Item value="KundenAnlegen`0" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="name" priority="0" />
+      <Item value="Vorname" priority="0" />
+      <Item value="vorname" priority="0" />
+      <Item value="Wohnort" priority="0" />
+      <Item value="wohnort" priority="0" />
+      <Item value="Adresse" priority="0" />
+      <Item value="adresse" priority="0" />
+      <Item value="PLZ" priority="0" />
+      <Item value="plz" priority="0" />
+      <Item value="_kundenService" priority="0" />
+      <Item value="return" priority="0" />
+      <Item value="Zinssatz" priority="0" />
+      <Item value="zinssatz" priority="0" />
+      <Item value="kondition" priority="1" />
+      <Item value="_bankService" priority="0" />
+      <Item value="kundenNummer" priority="1" />
+      <Item value="static" priority="2" />
+      <Item value="enum" priority="1" />
+      <Item value="bool" priority="0" />
+      <Item value="EinzahlError`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Guid">
-      <Item value="NewGuid`0" priority="0" />
+      <Item value="NewGuid`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
-      <Item value="IsNotNull`0" priority="0" />
+      <Item value="IsNotNull`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Geldverleih.Repository.interfaces.IAusleihRepository">
       <Item value="GeldAnKundenAusleihen`0" priority="2" />
@@ -102,11 +159,22 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Geldverleih.Service.interfaces.IBankService">
       <Item value="Expect`2" priority="2" />
-      <Item value="GeldAusleihen`0" priority="1" />
-      <Item value="GeldEinzahlen`0" priority="1" />
+      <Item value="GeldAusleihen`0" priority="2" />
+      <Item value="GeldEinzahlen`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Rhino.Mocks.Expect">
       <Item value="Call`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Geldverleih.Repository.interfaces.IKundenRepository">
+      <Item value="GetAlleKunden`0" priority="1" />
+      <Item value="KundenAnlegen`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Contains`0" priority="0" />
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Geldverleih.Domain.Kunde">
+      <Item value="Kundennummer" priority="7" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

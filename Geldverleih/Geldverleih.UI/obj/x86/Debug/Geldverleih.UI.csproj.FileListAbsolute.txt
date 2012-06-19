@@ -17,3 +17,10 @@ E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Servi
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Domain.pdb
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Service.pdb
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Repository.pdb
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.UI.exe.config
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\NHibernate.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\Iesi.Collections.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\NHibernate.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\Iesi.Collections.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\log4net.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\log4net.xml

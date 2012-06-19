@@ -7,3 +7,7 @@ E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Service\obj\Debug\Geldverleih.
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Service\obj\Debug\Geldverleih.Service.pdb
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Service\bin\Debug\Geldverleih.Repository.dll
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Service\bin\Debug\Geldverleih.Repository.pdb
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Service\bin\Debug\NHibernate.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Service\bin\Debug\Iesi.Collections.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Service\bin\Debug\NHibernate.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Service\bin\Debug\Iesi.Collections.xml
