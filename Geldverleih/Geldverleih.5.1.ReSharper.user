@@ -9,19 +9,14 @@
   <RecentFiles>
     <RecentFiles>
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="54" fromTop="1" />
-      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="457" fromTop="8" />
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="256" fromTop="7" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IKundenRepository.cs" caret="250" fromTop="10" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="270" fromTop="6" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:AusleihRepository.cs" caret="479" fromTop="14" />
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="745" fromTop="22" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1952" fromTop="24" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="381" fromTop="4" />
+      <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="102" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:VerleihKondition.cs" caret="53" fromTop="1" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IKundenRepository.cs" caret="247" fromTop="9" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="51" fromTop="1" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IKundenRepository.cs" caret="89" fromTop="2" />
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="419" fromTop="14" />
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="693" fromTop="25" />
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="681" fromTop="17" />
@@ -29,8 +24,6 @@
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:Kunde.cs" caret="457" fromTop="8" />
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="53" fromTop="1" />
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="256" fromTop="7" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:interfaces/f:IAusleihRepository.cs" caret="270" fromTop="6" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:AusleihRepository.cs" caret="168" fromTop="5" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="650" fromTop="10" />
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="292" fromTop="10" />
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="527" fromTop="17" />
@@ -43,6 +36,7 @@
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2190" fromTop="29" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1950" fromTop="23" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2314" fromTop="33" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="381" fromTop="4" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -88,6 +82,8 @@
       <Item value="Kunde" priority="0" />
       <Item value="VerleihKondition" priority="0" />
       <Item value="Expect`0" priority="0" />
+      <Item value="Navy" priority="0" />
+      <Item value="Olive" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Guid">
       <Item value="NewGuid`0" priority="0" />

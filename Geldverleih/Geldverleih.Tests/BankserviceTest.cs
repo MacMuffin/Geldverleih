@@ -22,7 +22,8 @@ namespace Geldverleih.Tests
         public void BankserviceKannErstelltWerden()
         {
             IAusleihRepository ausleihRepository = new AusleihRepository();
-            IBankService bankmanager = new BankService(ausleihRepository);
+            IKundenRepository kundenRepository = new KundenRepository();
+            IBankService bankmanager = new BankService(ausleihRepository, kundenRepository);
 
             Assert.IsNotNull(bankmanager);
         }
@@ -58,16 +59,18 @@ namespace Geldverleih.Tests
             IBankService bankmanager = _mockRepository.StrictMock<IBankService>();
 
             Kunde kunde = new Kunde();
+            Guid vorgangsNummer = Guid.NewGuid();
+
 
             using (_mockRepository.Record())
             {
-                Expect.Call(() => bankmanager.GeldEinzahlen(kunde, (decimal) 5.5));
-                Expect.Call(() => ausleihRepository.KundeZahltGeldEin(kunde, (decimal) 5.5));
+                Expect.Call(() => bankmanager.GeldEinzahlen(kunde, vorgangsNummer, (decimal) 5.5));
+                Expect.Call(() => ausleihRepository.KundeZahltGeldEin(kunde, vorgangsNummer, (decimal) 5.5));
             }
 
             _mockRepository.ReplayAll();
 
-            bankmanager.GeldEinzahlen(kunde, (decimal) 5.5);
+            bankmanager.GeldEinzahlen(kunde, vorgangsNummer, (decimal) 5.5);
 
             Assert.IsNotNull(bankmanager);
         }

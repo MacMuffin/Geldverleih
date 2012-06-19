@@ -1,17 +1,18 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using Geldverleih.Domain;
 using Geldverleih.Repository.interfaces;
 
 namespace Geldverleih.Repository
 {
-    public class AusleihRepository : IAusleihRepository
+    public class KundenRepository : IKundenRepository
     {
-        public void GeldAnKundenAusleihen(Kunde kunde, VerleihKondition verleihKondition)
+        public void KundenAnlegen(Kunde kunde)
         {
             throw new NotImplementedException();
         }
 
-        public void KundeZahltGeldEin(Kunde kunde, Guid vorgangsNummer, decimal betrag)
+        public IList<Kunde> GetAlleKunden()
         {
             throw new NotImplementedException();
         }

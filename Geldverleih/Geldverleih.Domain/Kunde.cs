@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Geldverleih.Domain
 {
     public class Kunde
     {
-        public Guid Kundennummer { get; set; }
-        public string Name { get; set; }
-        public string Vorname { get; set; }
-        public string Adresse { get; set; }
-        public int PLZ { get; set; }
-        public string Wohnort { get; set; }
-        public float Kontostand { get; set; }
+        public virtual Guid Kundennummer { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Vorname { get; set; }
+        public virtual string Adresse { get; set; }
+        public virtual int PLZ { get; set; }
+        public virtual string Wohnort { get; set; }
+        public virtual float Kontostand { get; set; }
 
         public Kunde()
         {

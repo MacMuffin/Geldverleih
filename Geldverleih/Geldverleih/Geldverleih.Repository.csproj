@@ -49,6 +49,7 @@
     <Compile Include="AusleihRepository.cs" />
     <Compile Include="interfaces\IAusleihRepository.cs" />
     <Compile Include="interfaces\IKundenRepository.cs" />
+    <Compile Include="KundenRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
