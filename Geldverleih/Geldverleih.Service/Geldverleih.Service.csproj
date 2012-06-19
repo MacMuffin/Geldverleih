@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="BankService.cs" />
     <Compile Include="interfaces\IBankService.cs" />
+    <Compile Include="interfaces\IKundenService.cs" />
+    <Compile Include="KundenService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

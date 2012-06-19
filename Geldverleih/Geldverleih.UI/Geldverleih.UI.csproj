@@ -69,6 +69,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="presenters\KundenPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -91,6 +92,20 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Geldverleih.Domain\Geldverleih.Domain.csproj">
+      <Project>{169EB44A-664C-4300-9FCA-5C6525389F9F}</Project>
+      <Name>Geldverleih.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Geldverleih.Service\Geldverleih.Service.csproj">
+      <Project>{C0408460-75D0-460E-8AB0-2EB5C523FF92}</Project>
+      <Name>Geldverleih.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Geldverleih\Geldverleih.Repository.csproj">
+      <Project>{DCE288BA-22C3-4590-8F1E-0134A6760EFF}</Project>
+      <Name>Geldverleih.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
