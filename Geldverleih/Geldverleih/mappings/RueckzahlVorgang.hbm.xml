@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                           assembly="Geldverleih.Domain"
+                           namespace="Geldverleih.Domain">
+  <class name="RueckzahlVorgang"
+        table="T_Rueckzahlvorgang">
+    <id name="RueckzahlvorgangNummer" column="RV_Nr">
+    </id>
+    <property name="Datum" column="RV_Datum"/>
+    <property name="Betrag" column="RV_Betrag"/>
+    <property name="AusleihvorgangNummer" column="RV_AL_Nr"/>
+  </class>
+</hibernate-mapping>

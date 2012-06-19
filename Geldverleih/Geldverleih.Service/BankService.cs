@@ -10,12 +10,14 @@ namespace Geldverleih.Service
     public class BankService : IBankService
     {
         private readonly IAusleihRepository _ausleihRepository;
+        private readonly IRueckzahlReppository _rueckzahlReppository;
         private readonly IKundenRepository _kundenRepository;
-        private readonly IAusUndVerleihFactory _factory;
+        private readonly IAusUndRueckzahlvorgangFactory _factory;
 
-        public BankService(IAusleihRepository ausleihRepository, IKundenRepository kundenRepository, IAusUndVerleihFactory factory)
+        public BankService(IAusleihRepository ausleihRepository, IRueckzahlReppository rueckzahlReppository, IKundenRepository kundenRepository, IAusUndRueckzahlvorgangFactory factory)
         {
             _ausleihRepository = ausleihRepository;
+            _rueckzahlReppository = rueckzahlReppository;
             _kundenRepository = kundenRepository;
             _factory = factory;
         }
@@ -31,7 +33,13 @@ namespace Geldverleih.Service
 
         public void GeldEinzahlen(Guid vorgangsNummer, decimal betrag)
         {
-            _ausleihRepository.KundeZahltGeldEin(vorgangsNummer, betrag);
+            RueckzahlVorgang rueckzahlVorgang = _factory.CreateRueckzahlVorgangObject(vorgangsNummer, betrag);
+            _rueckzahlReppository.KundeZahltGeldEin(rueckzahlVorgang);
+        }
+
+        public IList<AusleihVorgang> GetAlleAusleihvorgaenge()
+        {
+            return _ausleihRepository.GetAlleAusleihVorgaenge();
         }
 
         private void KundenAufVerfuegbarkeitPruefen(Guid kundenNummer)

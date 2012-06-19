@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Geldverleih.Domain;
 using Geldverleih.Service.interfaces;
 
@@ -21,6 +22,11 @@ namespace Geldverleih.UI.presenters
         public void GeldAusleihen(Kunde kunde, VerleihKondition kondition, decimal betrag)
         {
             _bankService.GeldAusleihen(kunde.Kundennummer, kondition, betrag);
+        }
+
+        public IList<AusleihVorgang> GetAlleAusleihvorgaenge()
+        {
+            return _bankService.GetAlleAusleihvorgaenge();
         }
     }
 }

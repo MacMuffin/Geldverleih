@@ -36,11 +36,16 @@ namespace Geldverleih.UI
 
 
             IAusleihRepository ausleihRepository = new AusleihRepository();
-            IAusUndVerleihFactory factory = new AusUndVerleihFactory();
-            IBankService bankService = new BankService(ausleihRepository, kundenRepository, factory);
+            IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
+            IRueckzahlReppository rueckzahlReppository = new RueckzahlRepository();
+            IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository, factory);
             BankPresenter bankPresenter = new BankPresenter(bankService);
 
             bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
+
+            IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
+
+            bankPresenter.GeldEinzahlen(ausleihVorgaenge.First().VorgangsNummer, 5.6m);
         }
     }
 }

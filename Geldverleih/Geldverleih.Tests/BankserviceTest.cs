@@ -23,8 +23,9 @@ namespace Geldverleih.Tests
         {
             IAusleihRepository ausleihRepository = new AusleihRepository();
             IKundenRepository kundenRepository = new KundenRepository();
-            IAusUndVerleihFactory factory = new AusUndVerleihFactory();
-            IBankService bankmanager = new BankService(ausleihRepository, kundenRepository, factory);
+            IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
+            IRueckzahlReppository rueckzahlReppository = new RueckzahlRepository();
+            IBankService bankmanager = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository, factory);
 
             Assert.IsNotNull(bankmanager);
         }
@@ -35,7 +36,7 @@ namespace Geldverleih.Tests
 
             IAusleihRepository ausleihRepository = _mockRepository.StrictMock<IAusleihRepository>();
             IBankService bankmanager = _mockRepository.StrictMock<IBankService>();
-            IAusUndVerleihFactory factory = _mockRepository.StrictMock<IAusUndVerleihFactory>();
+            IAusUndRueckzahlvorgangFactory factory = _mockRepository.StrictMock<IAusUndRueckzahlvorgangFactory>();
 
             Kunde kunde = new Kunde();
             VerleihKondition verleihKondition = new VerleihKondition();
@@ -58,7 +59,6 @@ namespace Geldverleih.Tests
         public void RueckgabeWirdInsRepositoryGeschrieben()
         {
 
-            IAusleihRepository ausleihRepository = _mockRepository.StrictMock<IAusleihRepository>();
             IBankService bankmanager = _mockRepository.StrictMock<IBankService>();
 
             Kunde kunde = new Kunde();
@@ -68,7 +68,6 @@ namespace Geldverleih.Tests
             using (_mockRepository.Record())
             {
                 Expect.Call(() => bankmanager.GeldEinzahlen(vorgangsNummer, (decimal) 5.5));
-                Expect.Call(() => ausleihRepository.KundeZahltGeldEin(vorgangsNummer, (decimal) 5.5));
             }
 
             _mockRepository.ReplayAll();

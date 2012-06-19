@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Geldverleih.Domain;
 
 namespace Geldverleih.Service.interfaces
@@ -7,5 +8,6 @@ namespace Geldverleih.Service.interfaces
     {
         void GeldAusleihen(Guid kundenNummer, VerleihKondition verleihKondition, decimal betrag);
         void GeldEinzahlen(Guid vorgangsNummer, decimal betrag);
+        IList<AusleihVorgang> GetAlleAusleihvorgaenge();
     }
 }

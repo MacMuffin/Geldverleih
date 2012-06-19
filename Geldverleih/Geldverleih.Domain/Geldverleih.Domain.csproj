@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AusleihVorgang.cs" />
     <Compile Include="Kunde.cs" />
+    <Compile Include="RueckzahlVorgang.cs" />
     <Compile Include="VerleihKondition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

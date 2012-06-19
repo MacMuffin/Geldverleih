@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AusUndVerleihFactory.cs" />
+    <Compile Include="AusUndRueckzahlvorgangFactory.cs" />
     <Compile Include="BankService.cs" />
-    <Compile Include="IAusUndVerleihFactory.cs" />
+    <Compile Include="IAusUndRueckzahlvorgangFactory.cs" />
     <Compile Include="interfaces\IBankService.cs" />
     <Compile Include="interfaces\IKundenService.cs" />
     <Compile Include="KundenService.cs" />

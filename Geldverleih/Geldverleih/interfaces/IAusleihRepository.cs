@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Geldverleih.Domain;
 
 namespace Geldverleih.Repository.interfaces
@@ -6,6 +7,6 @@ namespace Geldverleih.Repository.interfaces
     public interface IAusleihRepository
     {
         void GeldAnKundenAusleihen(AusleihVorgang ausleihVorgang);
-        void KundeZahltGeldEin(Guid vorgangsNummer, decimal betrag);
+        IList<AusleihVorgang> GetAlleAusleihVorgaenge();
     }
 }

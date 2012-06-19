@@ -3,8 +3,9 @@ using Geldverleih.Domain;
 
 namespace Geldverleih.Service
 {
-    public interface IAusUndVerleihFactory
+    public interface IAusUndRueckzahlvorgangFactory
     {
         AusleihVorgang CreateAusleihVorgangObject(Guid kundenNummer, VerleihKondition verleihKondition, decimal betrag);
+        RueckzahlVorgang CreateRueckzahlVorgangObject(Guid vorgangsNummer, decimal betrag);
     }
 }

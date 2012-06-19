@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Geldverleih.Domain;
 using Geldverleih.Repository.interfaces;
 
@@ -11,9 +12,9 @@ namespace Geldverleih.Repository
             Save(ausleihVorgang);
         }
 
-        public void KundeZahltGeldEin(Guid vorgangsNummer, decimal betrag)
+        public IList<AusleihVorgang> GetAlleAusleihVorgaenge()
         {
-            throw new NotImplementedException();
+            return GetAll();
         }
     }
 }
