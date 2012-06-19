@@ -37,6 +37,8 @@ namespace Geldverleih.UI
 
             IList<Kunde> kunden = kundenPresenter.AlleKundenAuslesen();
 
+            
+
 
             //IAusleihRepository ausleihRepository = new AusleihRepository();
             //IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
@@ -44,6 +46,8 @@ namespace Geldverleih.UI
             //IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository, factory);
             IBankService bankService = geldverleihUnityContainer.UnityContainer.Resolve<IBankService>();
             BankPresenter bankPresenter = new BankPresenter(bankService);
+
+            bankPresenter.TestLogEintrag();
 
             bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
 

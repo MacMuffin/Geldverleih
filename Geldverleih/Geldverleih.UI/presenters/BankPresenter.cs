@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using Geldverleih.Domain;
 using Geldverleih.Service.interfaces;
+using log4net;
 
 namespace Geldverleih.UI.presenters
 {
     public class BankPresenter
     {
+        protected static readonly ILog log = LogManager.GetLogger(typeof(BankPresenter));
+
+
         private readonly IBankService _bankService;
 
         public BankPresenter(IBankService bankService)
@@ -27,6 +31,13 @@ namespace Geldverleih.UI.presenters
         public IList<AusleihVorgang> GetAlleAusleihvorgaenge()
         {
             return _bankService.GetAlleAusleihvorgaenge();
+        }
+
+        public void TestLogEintrag()
+        {
+            log4net.Config.XmlConfigurator.Configure();
+
+            log.Warn("Test");
         }
     }
 }
