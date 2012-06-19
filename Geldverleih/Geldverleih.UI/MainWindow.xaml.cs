@@ -47,8 +47,6 @@ namespace Geldverleih.UI
             IBankService bankService = geldverleihUnityContainer.UnityContainer.Resolve<IBankService>();
             BankPresenter bankPresenter = new BankPresenter(bankService);
 
-            bankPresenter.TestLogEintrag();
-
             bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
 
             IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
