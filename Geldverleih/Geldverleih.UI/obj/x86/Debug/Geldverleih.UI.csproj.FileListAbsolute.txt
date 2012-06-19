@@ -24,3 +24,7 @@ E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\NHibernate.xml
 E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\Iesi.Collections.xml
 E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\log4net.dll
 E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\log4net.xml
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Unity.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Microsoft.Practices.Unity.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Unity.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Microsoft.Practices.Unity.xml

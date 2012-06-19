@@ -42,6 +42,9 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.0\lib\net40-client\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
@@ -117,6 +120,10 @@
     <ProjectReference Include="..\Geldverleih.Service\Geldverleih.Service.csproj">
       <Project>{C0408460-75D0-460E-8AB0-2EB5C523FF92}</Project>
       <Name>Geldverleih.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Geldverleih.Unity\Geldverleih.Unity.csproj">
+      <Project>{889B6B31-B25A-4BC5-A0B3-FFED6540D9E8}</Project>
+      <Name>Geldverleih.Unity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Geldverleih\Geldverleih.Repository.csproj">
       <Project>{DCE288BA-22C3-4590-8F1E-0134A6760EFF}</Project>

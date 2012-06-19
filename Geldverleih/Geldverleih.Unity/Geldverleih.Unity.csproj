@@ -49,11 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="GeldverleihUnityContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Geldverleih.Service\Geldverleih.Service.csproj">
+      <Project>{C0408460-75D0-460E-8AB0-2EB5C523FF92}</Project>
+      <Name>Geldverleih.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Geldverleih\Geldverleih.Repository.csproj">
+      <Project>{DCE288BA-22C3-4590-8F1E-0134A6760EFF}</Project>
+      <Name>Geldverleih.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
