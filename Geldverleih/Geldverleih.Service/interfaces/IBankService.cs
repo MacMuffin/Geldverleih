@@ -5,7 +5,7 @@ namespace Geldverleih.Service.interfaces
 {
     public interface IBankService
     {
-        void GeldAusleihen(Kunde kunde, VerleihKondition verleihKondition);
-        void GeldEinzahlen(Kunde kunde, Guid vorgangsNummer, decimal betrag);
+        void GeldAusleihen(Guid kundenNummer, VerleihKondition verleihKondition, decimal betrag);
+        void GeldEinzahlen(Guid vorgangsNummer, decimal betrag);
     }
 }

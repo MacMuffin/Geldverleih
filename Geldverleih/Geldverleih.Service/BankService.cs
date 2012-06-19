@@ -18,33 +18,33 @@ namespace Geldverleih.Service
             _kundenRepository = kundenRepository;
         }
 
-        public void GeldAusleihen(Kunde kunde, VerleihKondition verleihKondition)
+        public void GeldAusleihen(Guid kundenNummer, VerleihKondition verleihKondition, decimal betrag)
         {
-            KundenAufVerfuegbarkeitPruefen(kunde);
+            KundenAufVerfuegbarkeitPruefen(kundenNummer);
 
-            _ausleihRepository.GeldAnKundenAusleihen(kunde, verleihKondition);
+            _ausleihRepository.GeldAnKundenAusleihen(kundenNummer, verleihKondition);
         }
 
-        public void GeldEinzahlen(Kunde kunde, Guid vorgangsNummer, decimal betrag)
+        public void GeldEinzahlen(Guid vorgangsNummer, decimal betrag)
         {
-            KundenAufVerfuegbarkeitPruefen(kunde);
-
-            _ausleihRepository.KundeZahltGeldEin(kunde, vorgangsNummer, betrag);
+            _ausleihRepository.KundeZahltGeldEin(vorgangsNummer, betrag);
         }
 
-        private void KundenAufVerfuegbarkeitPruefen(Kunde kunde)
+        private void KundenAufVerfuegbarkeitPruefen(Guid kundenNummer)
         {
             IList<Kunde> alleKunden = _kundenRepository.GetAlleKunden();
 
-            if (!IstKundeInDerDatenbank(alleKunden, kunde))
+            if (!IstKundeInDerDatenbank(alleKunden, kundenNummer))
                 throw new ApplicationException(
                     string.Format("Der kunde {0} existiert nicht in der Datenbank! Bitte vorher anlegen",
-                                  kunde.Kundennummer));
+                                  kundenNummer));
         }
 
-        private bool IstKundeInDerDatenbank(IList<Kunde> alleKunden, Kunde kunde)
+        private bool IstKundeInDerDatenbank(IList<Kunde> alleKunden, Guid kundenNummer)
         {
-            return alleKunden.Any(x => x.Kundennummer == kunde.Kundennummer);
+            return alleKunden.Any(x => x.Kundennummer == kundenNummer);
         }
+
+        
     }
 }

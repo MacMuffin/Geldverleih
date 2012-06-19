@@ -11,3 +11,9 @@ E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\GenerateResou
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\Geldverleih.UI.exe
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\Geldverleih.UI.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Domain.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Repository.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Service.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Domain.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Service.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Repository.pdb

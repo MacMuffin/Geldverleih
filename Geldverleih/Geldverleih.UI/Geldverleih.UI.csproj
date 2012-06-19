@@ -69,7 +69,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="presenters\AusleihError.cs" />
+    <Compile Include="presenters\BankPresenter.cs" />
+    <Compile Include="presenters\EinzahlError.cs" />
+    <Compile Include="presenters\EinzahlResult.cs" />
     <Compile Include="presenters\KundenPresenter.cs" />
+    <Compile Include="presenters\VerleihKonditionErmittler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

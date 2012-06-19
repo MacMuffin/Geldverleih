@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1eb8202d-8839-4db1-a3c2-ae283ec7c1d4" name="Andy@ANDY-PC 2012-06-19 09:21:37" runUser="Andy-PC\Andy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="1e8110a4-fe86-41b2-aba8-127e0f01dea9">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Andy_ANDY-PC 2012-06-19 09_21_37">
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Service\bin\Debug\Geldverleih.Service.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih\bin\Debug\Geldverleih.Repository.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\bin\Debug\Geldverleih.Domain.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-19T09:21:37.8284876+02:00" queuing="2012-06-19T09:21:37.8440877+02:00" start="2012-06-19T09:21:37.8752877+02:00" finish="2012-06-19T09:21:38.6552891+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="BankserviceKannErstelltWerden" storage="e:\git\schule\geldverleih\geldverleih\geldverleih.tests\bin\debug\geldverleih.tests.dll" id="e35f944c-e4b6-be64-e3db-85bdd09946ba">
+      <Execution id="bf3d1731-52a8-48cb-b70b-dde91e39ea4a" />
+      <TestMethod codeBase="E:/Git/Schule/GeldVerleih/Geldverleih/Geldverleih.Tests/bin/Debug/Geldverleih.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Geldverleih.Tests.BankserviceTest, Geldverleih.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="BankserviceKannErstelltWerden" />
+    </UnitTest>
+    <UnitTest name="KunderepositoryKannErstelltWerden" storage="e:\git\schule\geldverleih\geldverleih\geldverleih.tests\bin\debug\geldverleih.tests.dll" id="cc58c426-32e9-a7a3-0566-5779b40e2d81">
+      <Execution id="aafe3a1b-db1d-40be-8655-bb1bb7a71b23" />
+      <TestMethod codeBase="E:/Git/Schule/GeldVerleih/Geldverleih/Geldverleih.Tests/bin/Debug/Geldverleih.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Geldverleih.Tests.KundenrepositoryTest, Geldverleih.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="KunderepositoryKannErstelltWerden" />
+    </UnitTest>
+    <UnitTest name="RueckgabeWirdInsRepositoryGeschrieben" storage="e:\git\schule\geldverleih\geldverleih\geldverleih.tests\bin\debug\geldverleih.tests.dll" id="68db84d8-8645-e225-dbf9-647bd947b8c1">
+      <Execution id="0f3af444-cfd5-4c5c-8095-0ccadd0996ad" />
+      <TestMethod codeBase="E:/Git/Schule/GeldVerleih/Geldverleih/Geldverleih.Tests/bin/Debug/Geldverleih.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Geldverleih.Tests.BankserviceTest, Geldverleih.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RueckgabeWirdInsRepositoryGeschrieben" />
+    </UnitTest>
+    <UnitTest name="AusleihvorgangWirdInsRepositoryGeschrieben" storage="e:\git\schule\geldverleih\geldverleih\geldverleih.tests\bin\debug\geldverleih.tests.dll" id="2c96dbd8-c26f-b555-2b6e-9317cd39ec32">
+      <Execution id="435e37e1-e521-43eb-8283-2a98d3bd4b41" />
+      <TestMethod codeBase="E:/Git/Schule/GeldVerleih/Geldverleih/Geldverleih.Tests/bin/Debug/Geldverleih.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Geldverleih.Tests.BankserviceTest, Geldverleih.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AusleihvorgangWirdInsRepositoryGeschrieben" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="2c96dbd8-c26f-b555-2b6e-9317cd39ec32" executionId="435e37e1-e521-43eb-8283-2a98d3bd4b41" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="68db84d8-8645-e225-dbf9-647bd947b8c1" executionId="0f3af444-cfd5-4c5c-8095-0ccadd0996ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc58c426-32e9-a7a3-0566-5779b40e2d81" executionId="aafe3a1b-db1d-40be-8655-bb1bb7a71b23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e35f944c-e4b6-be64-e3db-85bdd09946ba" executionId="bf3d1731-52a8-48cb-b70b-dde91e39ea4a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="435e37e1-e521-43eb-8283-2a98d3bd4b41" testId="2c96dbd8-c26f-b555-2b6e-9317cd39ec32" testName="AusleihvorgangWirdInsRepositoryGeschrieben" computerName="ANDY-PC" duration="00:00:00.1801226" startTime="2012-06-19T09:21:37.8752877+02:00" endTime="2012-06-19T09:21:38.2652884+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="435e37e1-e521-43eb-8283-2a98d3bd4b41">
+    </UnitTestResult>
+    <UnitTestResult executionId="0f3af444-cfd5-4c5c-8095-0ccadd0996ad" testId="68db84d8-8645-e225-dbf9-647bd947b8c1" testName="RueckgabeWirdInsRepositoryGeschrieben" computerName="ANDY-PC" duration="00:00:00.0038566" startTime="2012-06-19T09:21:38.2652884+02:00" endTime="2012-06-19T09:21:38.2808884+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f3af444-cfd5-4c5c-8095-0ccadd0996ad">
+    </UnitTestResult>
+    <UnitTestResult executionId="aafe3a1b-db1d-40be-8655-bb1bb7a71b23" testId="cc58c426-32e9-a7a3-0566-5779b40e2d81" testName="KunderepositoryKannErstelltWerden" computerName="ANDY-PC" duration="00:00:00.0005308" startTime="2012-06-19T09:21:38.2808884+02:00" endTime="2012-06-19T09:21:38.2808884+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aafe3a1b-db1d-40be-8655-bb1bb7a71b23">
+    </UnitTestResult>
+    <UnitTestResult executionId="bf3d1731-52a8-48cb-b70b-dde91e39ea4a" testId="e35f944c-e4b6-be64-e3db-85bdd09946ba" testName="BankserviceKannErstelltWerden" computerName="ANDY-PC" duration="00:00:00.0005016" startTime="2012-06-19T09:21:38.2964885+02:00" endTime="2012-06-19T09:21:38.2964885+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf3d1731-52a8-48cb-b70b-dde91e39ea4a">
+    </UnitTestResult>
+  </Results>
+</TestRun>

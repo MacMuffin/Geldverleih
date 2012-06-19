@@ -5,7 +5,7 @@ namespace Geldverleih.Repository.interfaces
 {
     public interface IAusleihRepository
     {
-        void GeldAnKundenAusleihen(Kunde kunde, VerleihKondition verleihKondition);
-        void KundeZahltGeldEin(Kunde kunde, Guid vorgangsNummer, decimal betrag);
+        void GeldAnKundenAusleihen(Guid kundenNummer, VerleihKondition verleihKondition);
+        void KundeZahltGeldEin(Guid vorgangsNummer, decimal betrag);
     }
 }

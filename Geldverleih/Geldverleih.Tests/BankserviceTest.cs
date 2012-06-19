@@ -40,13 +40,13 @@ namespace Geldverleih.Tests
 
             using (_mockRepository.Record())
             {
-                Expect.Call(() => bankmanager.GeldAusleihen(kunde, verleihKondition));
-                Expect.Call(() => ausleihRepository.GeldAnKundenAusleihen(kunde, verleihKondition));
+                Expect.Call(() => bankmanager.GeldAusleihen(kunde.Kundennummer, verleihKondition, (decimal)5.5));
+                Expect.Call(() => ausleihRepository.GeldAnKundenAusleihen(Guid.NewGuid(), verleihKondition));
             }
 
             _mockRepository.ReplayAll();
 
-            bankmanager.GeldAusleihen(kunde, verleihKondition);
+            bankmanager.GeldAusleihen(kunde.Kundennummer, verleihKondition, (decimal)5.5);
 
             Assert.IsNotNull(bankmanager);
         }
@@ -64,13 +64,13 @@ namespace Geldverleih.Tests
 
             using (_mockRepository.Record())
             {
-                Expect.Call(() => bankmanager.GeldEinzahlen(kunde, vorgangsNummer, (decimal) 5.5));
-                Expect.Call(() => ausleihRepository.KundeZahltGeldEin(kunde, vorgangsNummer, (decimal) 5.5));
+                Expect.Call(() => bankmanager.GeldEinzahlen(vorgangsNummer, (decimal) 5.5));
+                Expect.Call(() => ausleihRepository.KundeZahltGeldEin(vorgangsNummer, (decimal) 5.5));
             }
 
             _mockRepository.ReplayAll();
 
-            bankmanager.GeldEinzahlen(kunde, vorgangsNummer, (decimal) 5.5);
+            bankmanager.GeldEinzahlen(vorgangsNummer, (decimal) 5.5);
 
             Assert.IsNotNull(bankmanager);
         }

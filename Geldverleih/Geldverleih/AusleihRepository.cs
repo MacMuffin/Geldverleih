@@ -6,12 +6,12 @@ namespace Geldverleih.Repository
 {
     public class AusleihRepository : IAusleihRepository
     {
-        public void GeldAnKundenAusleihen(Kunde kunde, VerleihKondition verleihKondition)
+        public void GeldAnKundenAusleihen(Guid kundenNummer, VerleihKondition verleihKondition)
         {
             throw new NotImplementedException();
         }
 
-        public void KundeZahltGeldEin(Kunde kunde, Guid vorgangsNummer, decimal betrag)
+        public void KundeZahltGeldEin(Guid vorgangsNummer, decimal betrag)
         {
             throw new NotImplementedException();
         }
