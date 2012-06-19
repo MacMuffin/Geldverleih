@@ -4,4 +4,5 @@
   <Module PersistentId="C0408460-75D0-460E-8AB0-2EB5C523FF92" ModuleId="Geldverleih.Service" />
   <Module PersistentId="E53494D1-C70D-49A4-917C-02472B49F95F" ModuleId="Geldverleih.Tests" />
   <Module PersistentId="70373D92-854F-4AC0-B0EA-6F90E4363791" ModuleId="Geldverleih.UI" />
+  <Module PersistentId="889B6B31-B25A-4BC5-A0B3-FFED6540D9E8" ModuleId="Geldverleih.Unity" />
 </Modules>

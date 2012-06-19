@@ -1,0 +1,12 @@
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Geldverleih.Unity.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Geldverleih.Unity.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Microsoft.Practices.Unity.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Microsoft.Practices.Unity.xml
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\obj\Debug\ResolveAssemblyReference.cache
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\obj\Debug\Geldverleih.Unity.dll
+E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\obj\Debug\Geldverleih.Unity.pdb

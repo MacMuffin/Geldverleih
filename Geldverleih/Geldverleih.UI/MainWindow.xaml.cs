@@ -28,24 +28,24 @@ namespace Geldverleih.UI
         public MainWindow()
         {
             InitializeComponent();
-            IKundenRepository kundenRepository = new KundenRepository();
-            IKundenService kundenService = new KundenService(kundenRepository);
-            KundenPresenter kundenPresenter = new KundenPresenter(kundenService);
+            //IKundenRepository kundenRepository = new KundenRepository();
+            //IKundenService kundenService = new KundenService(kundenRepository);
+            //KundenPresenter kundenPresenter = new KundenPresenter(kundenService);
 
-            IList<Kunde> kunden = kundenPresenter.AlleKundenAuslesen();
+            //IList<Kunde> kunden = kundenPresenter.AlleKundenAuslesen();
 
 
-            IAusleihRepository ausleihRepository = new AusleihRepository();
-            IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
-            IRueckzahlReppository rueckzahlReppository = new RueckzahlRepository();
-            IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository, factory);
-            BankPresenter bankPresenter = new BankPresenter(bankService);
+            //IAusleihRepository ausleihRepository = new AusleihRepository();
+            //IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
+            //IRueckzahlReppository rueckzahlReppository = new RueckzahlRepository();
+            //IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository, factory);
+            //BankPresenter bankPresenter = new BankPresenter(bankService);
 
-            bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
+            //bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
 
-            IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
+            //IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
 
-            bankPresenter.GeldEinzahlen(ausleihVorgaenge.First().VorgangsNummer, 5.6m);
+            //bankPresenter.GeldEinzahlen(ausleihVorgaenge.First().VorgangsNummer, 5.6m);
         }
     }
 }
