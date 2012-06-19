@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                           assembly="Geldverleih.Domain"
+                           namespace="Geldverleih.Domain">
+  <class name="AusleihVorgang"
+        table="T_Ausleihvorgang">
+    <id name="VorgangsNummer" column="AL_Vorgangsnr">
+    </id>
+    <property name="Datum" column="AL_Datum"/>
+    <property name="Betrag" column="AL_Betrag"/>
+    <property name="KundenNummer" column="AL_KD_Nr"/>
+    <property name="ZinsSatz" column="AL_Zinssatz"/>
+  </class>
+</hibernate-mapping>

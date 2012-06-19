@@ -33,9 +33,14 @@ namespace Geldverleih.UI
             KundenPresenter kundenPresenter = new KundenPresenter(kundenService);
 
             IList<Kunde> kunden = kundenPresenter.AlleKundenAuslesen();
-            
 
-            kundenPresenter.KundenAnlegen("Test2", "Test2", "Test2","Test2", 63225);
+
+            IAusleihRepository ausleihRepository = new AusleihRepository();
+            IAusUndVerleihFactory factory = new AusUndVerleihFactory();
+            IBankService bankService = new BankService(ausleihRepository, kundenRepository, factory);
+            BankPresenter bankPresenter = new BankPresenter(bankService);
+
+            bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
         }
     }
 }

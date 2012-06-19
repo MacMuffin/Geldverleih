@@ -4,11 +4,11 @@ using Geldverleih.Repository.interfaces;
 
 namespace Geldverleih.Repository
 {
-    public class AusleihRepository : IAusleihRepository
+    public class AusleihRepository : RepositoryBase<AusleihVorgang>, IAusleihRepository
     {
-        public void GeldAnKundenAusleihen(Guid kundenNummer, VerleihKondition verleihKondition)
+        public void GeldAnKundenAusleihen(AusleihVorgang ausleihVorgang)
         {
-            throw new NotImplementedException();
+            Save(ausleihVorgang);
         }
 
         public void KundeZahltGeldEin(Guid vorgangsNummer, decimal betrag)

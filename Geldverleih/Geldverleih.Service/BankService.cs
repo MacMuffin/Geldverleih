@@ -11,18 +11,22 @@ namespace Geldverleih.Service
     {
         private readonly IAusleihRepository _ausleihRepository;
         private readonly IKundenRepository _kundenRepository;
+        private readonly IAusUndVerleihFactory _factory;
 
-        public BankService(IAusleihRepository ausleihRepository, IKundenRepository kundenRepository)
+        public BankService(IAusleihRepository ausleihRepository, IKundenRepository kundenRepository, IAusUndVerleihFactory factory)
         {
             _ausleihRepository = ausleihRepository;
             _kundenRepository = kundenRepository;
+            _factory = factory;
         }
 
         public void GeldAusleihen(Guid kundenNummer, VerleihKondition verleihKondition, decimal betrag)
         {
             KundenAufVerfuegbarkeitPruefen(kundenNummer);
 
-            _ausleihRepository.GeldAnKundenAusleihen(kundenNummer, verleihKondition);
+            AusleihVorgang ausleihVorgang = _factory.CreateAusleihVorgangObject(kundenNummer, verleihKondition, betrag);
+
+            _ausleihRepository.GeldAnKundenAusleihen(ausleihVorgang);
         }
 
         public void GeldEinzahlen(Guid vorgangsNummer, decimal betrag)
