@@ -8,5 +8,6 @@
             <StatusBarItem Content="Konto: " />
         </StatusBar>
         <DataGrid AutoGenerateColumns="True" Height="321" HorizontalAlignment="Left" Margin="0,40,0,0" Name="KundenDataGrid" VerticalAlignment="Top" Width="834" />
+        <Button Content="Kunden Hinzufügen" Height="35" HorizontalAlignment="Left" Name="AddKundeButton" VerticalAlignment="Top" Width="114" Click="AddKundeButton_Click" />
     </Grid>
 </Window>

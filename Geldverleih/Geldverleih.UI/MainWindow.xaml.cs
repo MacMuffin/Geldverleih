@@ -27,6 +27,7 @@ namespace Geldverleih.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private KundenPresenter _kundenPresenter;
 
         public MainWindow()
         {
@@ -34,12 +35,9 @@ namespace Geldverleih.UI
             GeldverleihUnityContainer geldverleihUnityContainer = new GeldverleihUnityContainer();
 
             IKundenService kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
-            KundenPresenter kundenPresenter = new KundenPresenter(kundenService);
+            _kundenPresenter = new KundenPresenter(kundenService);
 
-            IList<Kunde> kunden = kundenPresenter.AlleKundenAuslesen();
-
-            
-            KundenDataGrid.ItemsSource = kunden;
+            KundenUebersichtAktualisieren();
 
             //IAusleihRepository ausleihRepository = new AusleihRepository();
             //IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
@@ -53,6 +51,23 @@ namespace Geldverleih.UI
             //IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
 
             //bankPresenter.GeldEinzahlen(ausleihVorgaenge.First().VorgangsNummer, 5.6m);
+        }
+
+        public void KundenUebersichtAktualisieren()
+        {
+            IList<Kunde> kunden = _kundenPresenter.AlleKundenAuslesen();
+
+            
+            KundenDataGrid.ItemsSource = kunden;
+        }
+
+        private void AddKundeButton_Click(object sender, RoutedEventArgs e)
+        {
+            KundeDetailansicht kundeDetailansicht = new KundeDetailansicht(_kundenPresenter);
+
+            kundeDetailansicht.ShowDialog();
+
+            KundenUebersichtAktualisieren();
         }
     }
 }
