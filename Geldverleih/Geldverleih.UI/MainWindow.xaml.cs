@@ -27,6 +27,7 @@ namespace Geldverleih.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -38,20 +39,20 @@ namespace Geldverleih.UI
             IList<Kunde> kunden = kundenPresenter.AlleKundenAuslesen();
 
             
-
+            KundenDataGrid.ItemsSource = kunden;
 
             //IAusleihRepository ausleihRepository = new AusleihRepository();
             //IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
             //IRueckzahlReppository rueckzahlReppository = new RueckzahlRepository();
             //IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository, factory);
-            IBankService bankService = geldverleihUnityContainer.UnityContainer.Resolve<IBankService>();
-            BankPresenter bankPresenter = new BankPresenter(bankService);
+            //IBankService bankService = geldverleihUnityContainer.UnityContainer.Resolve<IBankService>();
+            //BankPresenter bankPresenter = new BankPresenter(bankService);
 
-            bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
+            //bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
 
-            IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
+            //IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
 
-            bankPresenter.GeldEinzahlen(ausleihVorgaenge.First().VorgangsNummer, 5.6m);
+            //bankPresenter.GeldEinzahlen(ausleihVorgaenge.First().VorgangsNummer, 5.6m);
         }
     }
 }

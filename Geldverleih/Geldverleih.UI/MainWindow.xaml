@@ -1,10 +1,12 @@
-﻿<Window x:Class="Geldverleih.UI.MainWindow"
+﻿<Window x:Class="Geldverleih.UI.MainWindow" Name="This"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Geldverleih" Height="516" Width="846">
     <Grid>
+        
         <StatusBar Height="23" HorizontalAlignment="Left" Margin="0,454,0,0" Name="statusBar1" VerticalAlignment="Top" Width="834" Background="Olive">
             <StatusBarItem Content="Konto: " />
         </StatusBar>
+        <DataGrid AutoGenerateColumns="True" Height="321" HorizontalAlignment="Left" Margin="0,40,0,0" Name="KundenDataGrid" VerticalAlignment="Top" Width="834" />
     </Grid>
 </Window>
