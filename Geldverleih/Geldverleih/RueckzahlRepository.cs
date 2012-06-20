@@ -15,13 +15,7 @@ namespace Geldverleih.Repository
 
         public IList<RueckzahlVorgang> GetAlleRueckzahlvorgaengeByVorgangsNummer(Guid vorgangsNummer)
         {
-            using (var session = GetSession())
-            {
-                IList<RueckzahlVorgang> liste = session.CreateCriteria(typeof(RueckzahlVorgang))
-                    .Add(Restrictions.Eq("AusleihvorgangNummer", vorgangsNummer))
-                    .List<RueckzahlVorgang>();
-                return liste;
-            }
+            return GetAllByIdAndProperty(vorgangsNummer, "AusleihvorgangNummer");
         }
     }
 }

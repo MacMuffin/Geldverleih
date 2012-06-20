@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Geldverleih.Repository.interfaces;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace Geldverleih.Repository
 {
@@ -50,6 +51,17 @@ namespace Geldverleih.Repository
             using (var session = GetSession())
             {
                 IList<T> liste = session.CreateCriteria(typeof(T))
+                    .List<T>();
+                return liste;
+            }
+        }
+
+        public IList<T> GetAllByIdAndProperty(Guid id, string propertyName)
+        {
+            using (var session = GetSession())
+            {
+                IList<T> liste = session.CreateCriteria(typeof(T))
+                    .Add(Restrictions.Eq(propertyName, id))
                     .List<T>();
                 return liste;
             }

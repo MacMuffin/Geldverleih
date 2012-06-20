@@ -20,13 +20,7 @@ namespace Geldverleih.Repository
 
         public IList<AusleihVorgang> GetAlleAusleihVorgaengeByKundenNummer(Guid kundenNummer)
         {
-            using (var session = GetSession())
-            {
-                IList<AusleihVorgang> liste = session.CreateCriteria(typeof(AusleihVorgang))
-                    .Add(Restrictions.Eq("KundenNummer", kundenNummer))
-                    .List<AusleihVorgang>();
-                return liste;
-            }
+            return GetAllByIdAndProperty(kundenNummer, "KundenNummer");
         }
     }
 }
