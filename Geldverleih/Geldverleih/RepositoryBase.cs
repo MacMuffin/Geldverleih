@@ -20,6 +20,16 @@ namespace Geldverleih.Repository
             }
         }
 
+        public IList<T> GetAllById(Guid id)
+        {
+            using (var session = GetSession())
+            {
+                IList<T> liste = session.CreateCriteria(typeof(T))
+                    .List<T>();
+                return liste; //TODO
+            }
+        }
+
         public void Save(T objekt)
         {
             using (var session = GetSession())

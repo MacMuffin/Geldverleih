@@ -16,5 +16,10 @@ namespace Geldverleih.Repository
         {
             return GetAll();
         }
+
+        public IList<AusleihVorgang> GetAlleAusleihVorgaengeByKundenNummer(Guid kundenNummer)
+        {
+            return GetAllById(kundenNummer);
+        }
     }
 }

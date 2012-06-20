@@ -42,6 +42,11 @@ namespace Geldverleih.Service
             return _ausleihRepository.GetAlleAusleihVorgaenge();
         }
 
+        public IList<AusleihVorgang> GetAlleAusleihvorgaengeByKundenNummer(Guid kundenNummer)
+        {
+            return _ausleihRepository.GetAlleAusleihVorgaengeByKundenNummer(kundenNummer);
+        }
+
         private void KundenAufVerfuegbarkeitPruefen(Guid kundenNummer)
         {
             IList<Kunde> alleKunden = _kundenRepository.GetAlleKunden();
