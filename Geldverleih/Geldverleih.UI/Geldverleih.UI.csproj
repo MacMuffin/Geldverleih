@@ -67,6 +67,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="views\IKundeDetailView.cs" />
+    <Compile Include="views\IKundenUebersichtView.cs" />
     <Page Include="KundeDetailansicht.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +90,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\KundenDetailModel.cs" />
     <Compile Include="models\KundenModel.cs" />
     <Compile Include="models\StatusleisteModel.cs" />
     <Compile Include="presenters\AusleihError.cs" />
