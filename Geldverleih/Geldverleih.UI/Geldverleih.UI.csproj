@@ -88,6 +88,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\KundenModel.cs" />
     <Compile Include="models\StatusleisteModel.cs" />
     <Compile Include="presenters\AusleihError.cs" />
     <Compile Include="presenters\BankPresenter.cs" />
