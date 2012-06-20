@@ -7,7 +7,7 @@ namespace Geldverleih.Repository
 {
     public class RepositoryBase<T> : IRepository<T>
     {
-        private static ISession GetSession()
+        protected static ISession GetSession()
         {
             return SessionProvider.SessionFactory.OpenSession();
         }
@@ -17,16 +17,6 @@ namespace Geldverleih.Repository
             using (var session = GetSession())
             {
                 return session.Get<T>(id);
-            }
-        }
-
-        public IList<T> GetAllById(Guid id)
-        {
-            using (var session = GetSession())
-            {
-                IList<T> liste = session.CreateCriteria(typeof(T))
-                    .List<T>();
-                return liste; //TODO
             }
         }
 
