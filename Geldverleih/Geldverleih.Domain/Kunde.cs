@@ -19,6 +19,7 @@ namespace Geldverleih.Domain
             Vorname = "";
             Adresse = "";
             Wohnort = "";
+            PLZ = 0;
             Kontostand = 0.0f;
         }
     }
