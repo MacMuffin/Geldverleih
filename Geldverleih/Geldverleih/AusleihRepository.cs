@@ -22,5 +22,10 @@ namespace Geldverleih.Repository
         {
             return GetAllByIdAndProperty(kundenNummer, "KundenNummer");
         }
+
+        public AusleihVorgang GetAusleihvorgangByVorgangsnummer(Guid vorgangsnummer)
+        {
+            return GetById(vorgangsnummer);
+        }
     }
 }

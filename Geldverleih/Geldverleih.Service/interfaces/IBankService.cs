@@ -10,5 +10,7 @@ namespace Geldverleih.Service.interfaces
         void GeldEinzahlen(Guid vorgangsNummer, decimal betrag);
         IList<AusleihVorgang> GetAlleAusleihvorgaenge();
         IList<AusleihVorgang> GetAlleAusleihvorgaengeByKundenNummer(Guid kundenNummer);
+        AusleihVorgang GetAusleihvorgangByVorgangsnummer(Guid vorgangsnummer);
+        IList<RueckzahlVorgang> GetAlleRueckzahlvorgaengeByVorgangsNummer(Guid vorgangsNummer);
     }
 }

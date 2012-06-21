@@ -9,5 +9,6 @@ namespace Geldverleih.Repository.interfaces
         void GeldAnKundenAusleihen(AusleihVorgang ausleihVorgang);
         IList<AusleihVorgang> GetAlleAusleihVorgaenge();
         IList<AusleihVorgang> GetAlleAusleihVorgaengeByKundenNummer(Guid kundenNummer);
+        AusleihVorgang GetAusleihvorgangByVorgangsnummer(Guid vorgangsnummer);
     }
 }
