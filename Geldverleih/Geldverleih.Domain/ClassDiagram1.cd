@@ -1,35 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Geldverleih.Domain.AusleihVorgang">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <Members>
-      <Property Name="Betrag" Hidden="true" />
-      <Property Name="Datum" Hidden="true" />
-      <Property Name="KundenNummer" Hidden="true" />
-      <Property Name="VorgangsNummer" Hidden="true" />
-      <Property Name="ZinsSatz" Hidden="true" />
-    </Members>
+    <Position X="0.5" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAECAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAQAAAA=</HashCode>
       <FileName>AusleihVorgang.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Geldverleih.Domain.Kunde">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="3.75" Y="0.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAACQAAAAAAEAAAAAAAAgAQAAAAAAAAABAAAQAAAAAA=</HashCode>
       <FileName>Kunde.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Geldverleih.Domain.RueckzahlVorgang">
-    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Position X="0.5" Y="3.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAABQAAEAAAAAAA=</HashCode>
       <FileName>RueckzahlVorgang.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Geldverleih.Domain.VerleihKondition">
-    <Position X="4.75" Y="1.75" Width="1.5" />
+    <Position X="4" Y="3.5" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>VerleihKondition.cs</FileName>

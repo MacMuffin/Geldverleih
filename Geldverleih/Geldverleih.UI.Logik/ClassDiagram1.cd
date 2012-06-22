@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Geldverleih.UI.Logik.JahresZinsRechner" BaseTypeListCollapsed="true">
-    <Position X="1" Y="2" Width="3.5" />
+    <Position X="0.5" Y="2.25" Width="8.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
       <FileName>JahresZinsRechner.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Geldverleih.UI.Logik.MonatsZinsRechner" BaseTypeListCollapsed="true">
-    <Position X="5" Y="0.5" Width="3" />
+    <Position X="0.5" Y="0.5" Width="8.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
       <FileName>MonatsZinsRechner.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Geldverleih.UI.Logik.TagesZinsRechner" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="4" Width="3.75" />
+    <Position X="0.5" Y="4" Width="8.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAACAAAAAAAAAAAAYAAAAAAAABAAA=</HashCode>
       <FileName>TagesZinsRechner.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Geldverleih.UI.Logik.ZeitSpanne">
-    <Position X="6.5" Y="2.5" Width="1.5" />
+    <Position X="8" Y="6.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ZeitSpanne.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Geldverleih.UI.Logik.IZinsRechner">
-    <Position X="1.25" Y="0.5" Width="2.75" />
+    <Position X="0.5" Y="6.5" Width="7.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
       <FileName>IZinsRechner.cs</FileName>
