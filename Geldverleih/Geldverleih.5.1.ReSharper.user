@@ -9,7 +9,6 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:TagesZinsRechnerTest.cs" caret="671" fromTop="19" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:models/f:AusleihViewModel.cs" caret="165" fromTop="5" />
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:AusleihVorgang.cs" caret="67" fromTop="3" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:BankPresenter.cs" caret="2840" fromTop="26" />
@@ -39,6 +38,7 @@
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/d:interfaces/f:IBankService.cs" caret="278" fromTop="8" />
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="1345" fromTop="24" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2201" fromTop="6" />
+      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:AusleihError.cs" caret="44" fromTop="1" />
     </RecentFiles>
     <RecentEdits>
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="2948" fromTop="38" />
