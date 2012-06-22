@@ -67,8 +67,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GeldEinzahlenView.xaml.cs">
+      <DependentUpon>GeldEinzahlenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="models\AusleihViewModel.cs" />
+    <Compile Include="presenters\KundeDetailPresenter.cs" />
+    <Compile Include="views\IEinzahlungsView.cs" />
     <Compile Include="views\IKundeDetailView.cs" />
     <Compile Include="views\IKundenUebersichtView.cs" />
+    <Page Include="GeldEinzahlenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="KundeDetailansicht.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,7 +107,7 @@
     <Compile Include="presenters\BankPresenter.cs" />
     <Compile Include="presenters\EinzahlError.cs" />
     <Compile Include="presenters\EinzahlResult.cs" />
-    <Compile Include="presenters\KundenPresenter.cs" />
+    <Compile Include="presenters\KundenUebersichtPresenter.cs" />
     <Compile Include="presenters\VerleihKonditionErmittler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -119,6 +129,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -135,6 +146,10 @@
       <Project>{C0408460-75D0-460E-8AB0-2EB5C523FF92}</Project>
       <Name>Geldverleih.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Geldverleih.UI.Logik\Geldverleih.UI.Logik.csproj">
+      <Project>{97A35116-8F4A-43B9-BE23-6B13A3648656}</Project>
+      <Name>Geldverleih.UI.Logik</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Geldverleih.Unity\Geldverleih.Unity.csproj">
       <Project>{889B6B31-B25A-4BC5-A0B3-FFED6540D9E8}</Project>
       <Name>Geldverleih.Unity</Name>
@@ -143,6 +158,18 @@
       <Project>{DCE288BA-22C3-4590-8F1E-0134A6760EFF}</Project>
       <Name>Geldverleih.Repository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\add_user.png" />
+    <Resource Include="icons\delete_user.png" />
+    <Resource Include="icons\diskette.png" />
+    <Resource Include="icons\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\money_bills.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

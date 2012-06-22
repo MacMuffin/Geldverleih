@@ -5,7 +5,7 @@ namespace Geldverleih.Service.interfaces
 {
     public interface IKundenService
     {
-        void KundenAnlegen(Kunde kunde);
+        void KundenSpeichern(Kunde kunde);
         IList<Kunde> AlleKundenAuslesen();
     }
 }

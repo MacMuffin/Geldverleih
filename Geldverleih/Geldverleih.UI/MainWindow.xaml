@@ -4,10 +4,66 @@
         Title="Geldverleih" Height="516" Width="846">
     <Grid>
         
-        <StatusBar Height="23" HorizontalAlignment="Left" Margin="0,454,0,0" Name="statusBar1" VerticalAlignment="Top" Width="834" Background="Olive">
-            <StatusBarItem Content="Konto: " />
+        <StatusBar Height="23" HorizontalAlignment="Left" Margin="0,454,0,0" Name="statusBar1" VerticalAlignment="Top" Width="834" Background="#FFA5C140" >
+            <StatusBarItem Content="Konto: Andreas Tarakanov">
+            </StatusBarItem>
+            <StatusBarItem Content="                            +++ Hier ist ein Ticker mit aktuellen Informationen +++">
+            </StatusBarItem>
+            <StatusBarItem Content="                          Datenbank: Andy-Pc\SqlExpress">
+            </StatusBarItem>
         </StatusBar>
-        <DataGrid AutoGenerateColumns="True" Height="321" HorizontalAlignment="Left" Margin="0,40,0,0" Name="KundenDataGrid" VerticalAlignment="Top" Width="834" />
-        <Button Content="Kunden Hinzufügen" Height="35" HorizontalAlignment="Left" Name="AddKundeButton" VerticalAlignment="Top" Width="114" Click="AddKundeButton_Click" />
+        <ToolBar Height="58" HorizontalAlignment="Right" Name="toolBar1" VerticalAlignment="Top" Width="824" DockPanel.Dock="Top">
+            <Button Name="AddKundeButton" Click="AddKundeButton_Click">
+                <Image Source="icons/add_user.png" ></Image>
+            </Button>
+            <Button Name="EditKundeButton" Click="EditKundeButton_Click">
+                <Image Source="icons/pencil.png" ></Image>
+            </Button>
+            <Separator Width="520">
+                <Separator.Background>
+                    <SolidColorBrush />
+                </Separator.Background>
+            </Separator>
+            <TextBox Width="150" Height="30" SelectionBrush="#FF5DBA24" Background="#FFEBEBEB">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+        </ToolBar>
+        <TabControl Height="398" HorizontalAlignment="Left" Margin="0,58,0,0" Name="tabControl1" VerticalAlignment="Top" Width="834">
+            <TabItem Header="Kundenübersicht" Name="KundenuebersichtTab">
+                <Grid Width="830">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="804*" />
+                        <ColumnDefinition Width="10*" />
+                    </Grid.ColumnDefinitions>
+                    <DataGrid AutoGenerateColumns="True" Height="367" HorizontalAlignment="Left" Margin="-3,2,0,0" Name="KundenDataGrid" VerticalAlignment="Top" Width="829" Grid.ColumnSpan="2">
+                        <DataGrid.Resources>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Control.Background" Value="#5FBA27" />
+                            </Style>
+                        </DataGrid.Resources>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Name="StatistikTab" Header="Stastiken">
+                <Grid Name="grid1" Margin="0,0,0,0">
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="13,79,0,0" Name="comboBox1" VerticalAlignment="Top" Width="151" SelectedIndex="0">
+                        <ComboBoxItem Content="Tag" />
+                    </ComboBox>
+                    <Label Content="Einnahmen:" Height="28" HorizontalAlignment="Left" Margin="13,117,0,0" Name="EinnahmenLabel" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="148,122,0,0" Name="EinnahmenTextblock" Text="14509.55" VerticalAlignment="Top" />
+                    <Label Content="Verliehenes Geld:" Height="28" HorizontalAlignment="Left" Margin="13,158,0,0" Name="VerliehenesGeldLabel" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="148,163,0,0" Name="VerliehenesGeldTextblock" Text="12055.63" VerticalAlignment="Top" />
+                    <Label Content="Zinsen einnahmen:" Height="28" HorizontalAlignment="Left" Margin="13,196,0,0" Name="ZinsenEinnahmenLabel" VerticalAlignment="Top" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="148,201,0,0" Name="ZinsenEinnahmenTextblock" Text="2453.92" VerticalAlignment="Top" />
+                    <Label Content="Einnahmen anzeigen nach" Height="28" HorizontalAlignment="Left" Margin="13,45,0,0" Name="EinnahmenAnzeigenNachLabel" VerticalAlignment="Top" Width="151" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+       
     </Grid>
 </Window>

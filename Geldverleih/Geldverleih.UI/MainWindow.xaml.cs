@@ -16,7 +16,9 @@ using Geldverleih.Repository;
 using Geldverleih.Repository.interfaces;
 using Geldverleih.Service;
 using Geldverleih.Service.interfaces;
+using Geldverleih.UI.Logik;
 using Geldverleih.UI.presenters;
+using Geldverleih.UI.views;
 using Geldverleih.Unity;
 using Microsoft.Practices.Unity;
 
@@ -27,35 +29,27 @@ namespace Geldverleih.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private KundenPresenter _kundenPresenter;
+        private readonly KundenUebersichtPresenter _kundenUebersichtPresenter;
+        private readonly IKundenService _kundenService;
+        private readonly BankPresenter _bankPresenter;
+        private IZinssatzFactory _zinssatzFactory;
 
         public MainWindow()
         {
             InitializeComponent();
             GeldverleihUnityContainer geldverleihUnityContainer = new GeldverleihUnityContainer();
 
-            IKundenService kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
-            _kundenPresenter = new KundenPresenter(kundenService);
+            _kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
+            _zinssatzFactory = geldverleihUnityContainer.UnityContainer.Resolve<IZinssatzFactory>();
+            _kundenUebersichtPresenter = new KundenUebersichtPresenter(_kundenService);
+            _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>());
 
             KundenUebersichtAktualisieren();
-
-            //IAusleihRepository ausleihRepository = new AusleihRepository();
-            //IAusUndRueckzahlvorgangFactory factory = new AusUndRueckzahlvorgangFactory();
-            //IRueckzahlReppository rueckzahlReppository = new RueckzahlRepository();
-            //IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository, factory);
-            //IBankService bankService = geldverleihUnityContainer.UnityContainer.Resolve<IBankService>();
-            //BankPresenter bankPresenter = new BankPresenter(bankService);
-
-            //bankPresenter.GeldAusleihen(kunden.First(), new VerleihKondition(), 12.5m);
-
-            //IList<AusleihVorgang> ausleihVorgaenge = bankPresenter.GetAlleAusleihvorgaenge();
-
-            //bankPresenter.GeldEinzahlen(ausleihVorgaenge.First().VorgangsNummer, 5.6m);
         }
 
         public void KundenUebersichtAktualisieren()
         {
-            IList<Kunde> kunden = _kundenPresenter.AlleKundenAuslesen();
+            IList<Kunde> kunden = _kundenUebersichtPresenter.AlleKundenAuslesen();
 
             
             KundenDataGrid.ItemsSource = kunden;
@@ -63,10 +57,21 @@ namespace Geldverleih.UI
 
         private void AddKundeButton_Click(object sender, RoutedEventArgs e)
         {
-            KundeDetailansicht kundeDetailansicht = new KundeDetailansicht(_kundenPresenter);
+            IKundeDetailView kundeDetailView = new KundeDetailansicht();
+            KundeDetailPresenter kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
 
-            kundeDetailansicht.ShowDialog();
+            kundeDetailPresenter.NeuerKundeDetailView();
+            KundenUebersichtAktualisieren();
+        }
 
+        private void EditKundeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Kunde ausgewaehlterKunde = (Kunde)KundenDataGrid.SelectedItem;
+
+            IKundeDetailView kundeDetailView = new KundeDetailansicht();
+            KundeDetailPresenter kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
+
+            kundeDetailPresenter.KundeBearbeitenDetailView(ausgewaehlterKunde);
             KundenUebersichtAktualisieren();
         }
     }

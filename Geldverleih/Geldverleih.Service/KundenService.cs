@@ -15,7 +15,7 @@ namespace Geldverleih.Service
             _kundenRepository = kundenRepository;
         }
 
-        public void KundenAnlegen(Kunde kunde)
+        public void KundenSpeichern(Kunde kunde)
         {
             _kundenRepository.KundenAnlegen(kunde);
         }

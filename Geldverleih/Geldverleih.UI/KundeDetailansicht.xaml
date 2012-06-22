@@ -1,18 +1,46 @@
 ﻿<Window x:Class="Geldverleih.UI.KundeDetailansicht"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="KundeDetailansicht" Height="394" Width="778">
+        Title="KundeDetailansicht" Height="449" Width="445">
     <Grid>
-        <Label Content="Vorname" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Content="Name" Height="28" HorizontalAlignment="Left" Margin="12,93,0,0" Name="label2" VerticalAlignment="Top" />
-        <Label Content="Adresse" Height="28" HorizontalAlignment="Left" Margin="12,176,0,0" Name="label3" VerticalAlignment="Top" />
-        <Label Content="PLZ" Height="28" HorizontalAlignment="Left" Margin="12,258,0,0" Name="label4" VerticalAlignment="Top" />
-        <Label Content="Wohnort" Height="28" HorizontalAlignment="Left" Margin="269,12,0,0" Name="label5" VerticalAlignment="Top" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,46,0,0" Name="VornameTextbox" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,127,0,0" Name="NameTextbox" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,210,0,0" Name="AdresseTextbox" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,292,0,0" Name="PLZTextbox" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="269,46,0,0" Name="WohnortTextbox" VerticalAlignment="Top" Width="120" />
-        <Button Content="Speichern" Height="217" HorizontalAlignment="Left" Margin="269,98,0,0" Name="SpeichernButton" VerticalAlignment="Top" Width="120" Click="SpeichernButton_Click" />
+        <TabControl Height="410" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="756">
+            <TabItem Header="Kundeninformation" Name="KundeninformationTab">
+                <Grid>
+                    <Label Content="Vorname" Height="28" HorizontalAlignment="Left" Margin="10,76,0,0" Name="label1" VerticalAlignment="Top" />
+                    <Label Content="Name" Height="28" HorizontalAlignment="Left" Margin="195,76,0,0" Name="label2" VerticalAlignment="Top" />
+                    <Label Content="Adresse" Height="28" HorizontalAlignment="Left" Margin="10,141,0,0" Name="label3" VerticalAlignment="Top" />
+                    <Label Content="PLZ" Height="28" HorizontalAlignment="Left" Margin="10,205,0,0" Name="label4" VerticalAlignment="Top" />
+                    <Label Content="Wohnort" Height="28" HorizontalAlignment="Left" Margin="195,205,0,0" Name="label5" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="10,110,0,0" Name="VornameTextbox" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="195,110,0,0" Name="NameTextbox" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="10,175,0,0" Name="AdresseTextbox" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="10,239,0,0" Name="PLZTextbox" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="195,239,0,0" Name="WohnortTextbox" VerticalAlignment="Top" Width="120" />
+                    <ToolBar Height="60" HorizontalAlignment="Left" Name="toolBar1" VerticalAlignment="Top" Width="418">
+                        <Button Name="SpeichernButton" Click="SpeichernButton_Click">
+                            <Image Source="icons/diskette.png"></Image>
+                        </Button>
+                        <Button Name="CancelButton" Click="CancelButton_Click">
+                            <Image Source="icons/x.png"></Image>
+                        </Button>
+                    </ToolBar>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ausleihvorgänge" Name="AusleihvorgaengeTab" RequestBringIntoView="AusleihvorgaengeTab_RequestBringIntoView">
+                <Grid>
+                    <DataGrid AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="-1,151,0,0" Name="AusleihvorgaengeKundeGrid" Width="417" />
+                    <Button Content="Betrag Ausleihen" Height="38" HorizontalAlignment="Left" Margin="313,102,0,0" Name="AusleihenButton" VerticalAlignment="Top" Width="103" Click="AusleihenButton_Click" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="0,110,0,0" Name="ZinssatzComboBox" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="174,110,0,0" Name="LeihbetragTextbox" VerticalAlignment="Top" Width="120" />
+                    <Label Content="Zinssatz" Height="28" HorizontalAlignment="Left" Margin="-1,79,0,0" Name="ZinssatzLabel" VerticalAlignment="Top" />
+                    <Label Content="Leihbetrag" Height="28" HorizontalAlignment="Left" Margin="174,79,0,0" Name="LeihbetragLabel" VerticalAlignment="Top" />
+                    <ToolBar Height="60" HorizontalAlignment="Left" Name="toolBar2" VerticalAlignment="Top" Width="418">
+                        <Button Name="GeldEinzahlenButton" Click="GeldEinzahlenButton_Click" >
+                            <Image Source="icons/money_bills.png"></Image>
+                        </Button>
+                    </ToolBar>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
