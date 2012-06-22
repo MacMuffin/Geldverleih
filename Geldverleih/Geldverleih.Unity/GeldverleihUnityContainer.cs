@@ -6,6 +6,7 @@ using Geldverleih.Repository;
 using Geldverleih.Repository.interfaces;
 using Geldverleih.Service;
 using Geldverleih.Service.interfaces;
+using Geldverleih.UI.Logik;
 using Microsoft.Practices.Unity;
 
 namespace Geldverleih.Unity
@@ -13,7 +14,7 @@ namespace Geldverleih.Unity
     public class GeldverleihUnityContainer
     {
         private IUnityContainer _unityContainer;
-
+            
         public IUnityContainer UnityContainer
         {
             get
@@ -38,6 +39,8 @@ namespace Geldverleih.Unity
             unityContainer.RegisterType<IKundenRepository, KundenRepository>();
             unityContainer.RegisterType<IKundenService, KundenService>();
             unityContainer.RegisterType<IAusUndRueckzahlvorgangFactory, AusUndRueckzahlvorgangFactory>();
+            unityContainer.RegisterType<IZinsRechner, TagesZinsRechner>();
+            unityContainer.RegisterType<IZinssatzFactory, ZinssatzFactory>();
 
             return unityContainer;
         }

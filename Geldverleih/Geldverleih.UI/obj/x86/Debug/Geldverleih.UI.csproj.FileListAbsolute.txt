@@ -30,3 +30,7 @@ E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.Unity
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Microsoft.Practices.Unity.xml
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\KundeDetailansicht.baml
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\KundeDetailansicht.g.cs
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.UI.Logik.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.UI.Logik.pdb
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\GeldEinzahlenView.baml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.UI\obj\x86\Debug\GeldEinzahlenView.g.cs

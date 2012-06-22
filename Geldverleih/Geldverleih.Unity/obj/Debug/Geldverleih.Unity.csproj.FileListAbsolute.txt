@@ -20,3 +20,5 @@ E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Geldverleih.Re
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Geldverleih.Domain.pdb
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\NHibernate.xml
 E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Iesi.Collections.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Unity\bin\Debug\Geldverleih.UI.Logik.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Unity\bin\Debug\Geldverleih.UI.Logik.pdb

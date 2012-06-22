@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Geldverleih.Domain;
 using Geldverleih.Service.interfaces;
+using Geldverleih.UI.Logik;
 using log4net;
 
 namespace Geldverleih.UI.presenters
@@ -13,25 +14,28 @@ namespace Geldverleih.UI.presenters
 
 
         private readonly IBankService _bankService;
+        private readonly IZinsRechner _zinsRechner;
 
-        public BankPresenter(IBankService bankService)
+        public BankPresenter(IBankService bankService, IZinsRechner zinsRechner)
         {
             _bankService = bankService;
+            _zinsRechner = zinsRechner;
         }
 
         public void GeldEinzahlen(Guid vorgangsNummer, decimal betrag)
         {
             AusleihVorgang ausleihVorgang = _bankService.GetAusleihvorgangByVorgangsnummer(vorgangsNummer);
 
-            decimal zuZahlenderBetrag = ausleihVorgang.Betrag;
+            decimal zuZahlenderBetrag = _zinsRechner.BetragMitZinsenFuerZeitraumBerechnen(ausleihVorgang.Betrag,
+                                                                                 ausleihVorgang.ZinsSatz,
+                                                                                 ausleihVorgang.VorgangsNummer,
+                                                                                 new ZeitSpanne
+                                                                                     {
+                                                                                         StartDatum = ausleihVorgang.Datum,
+                                                                                         EndDatum = DateTime.Now
+                                                                                     });
 
-            IList<RueckzahlVorgang> alleRueckzahlungenZumVorgang = _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
-
-            alleRueckzahlungenZumVorgang.Select(x => zuZahlenderBetrag -= x.Betrag);
-
-
-
-            _bankService.GeldEinzahlen(vorgangsNummer, betrag);
+            EingezahltenBetragVomZuZahlendenBetragAbziehen(zuZahlenderBetrag, betrag, vorgangsNummer);
         }
 
         public EinzahlResult EingezahltenBetragVomZuZahlendenBetragAbziehen(decimal zuZahlenderBetrag, decimal eingezahlterBetrag, Guid vorgangsNummer)
@@ -61,6 +65,11 @@ namespace Geldverleih.UI.presenters
         public IList<AusleihVorgang> GetAlleAusleihvorgaenge()
         {
             return _bankService.GetAlleAusleihvorgaenge();
+        }
+
+        public IList<AusleihVorgang> GetAlleAusleihvorgaengeByKundenNummer(Guid kundenNummer)
+        {
+            return _bankService.GetAlleAusleihvorgaengeByKundenNummer(kundenNummer);
         }
 
         public void TestLogEintrag()

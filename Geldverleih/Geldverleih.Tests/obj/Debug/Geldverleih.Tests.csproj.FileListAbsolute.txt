@@ -15,3 +15,12 @@ E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\NHibernate.dll
 E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Iesi.Collections.dll
 E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\NHibernate.xml
 E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Iesi.Collections.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.UI.exe
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\log4net.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Unity.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.UI.pdb
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\log4net.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.Unity.pdb
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.UI.Logik.dll
+E:\Git\Schule\Geldverleih\Geldverleih\Geldverleih.Tests\bin\Debug\Geldverleih.UI.Logik.pdb
