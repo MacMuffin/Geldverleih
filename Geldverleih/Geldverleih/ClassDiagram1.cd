@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Geldverleih.Repository.KundenRepository">
-    <Position X="5" Y="1.75" Width="1.5" />
+    <Position X="4.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAgAAAAAAAA=</HashCode>
       <FileName>KundenRepository.cs</FileName>
@@ -25,7 +25,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Geldverleih.Repository.RueckzahlRepository">
-    <Position X="3.5" Y="5.25" Width="4" />
+    <Position X="1" Y="5.5" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RueckzahlRepository.cs</FileName>
@@ -33,35 +33,35 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Geldverleih.Repository.SessionProvider">
-    <Position X="7.25" Y="0.5" Width="1.75" />
+    <Position X="4.25" Y="2.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAgAAAAAAAAQAAAAQAAAAAAAQAAAAAAAEAAA=</HashCode>
       <FileName>SessionProvider.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Geldverleih.Repository.interfaces.IAusleihRepository">
-    <Position X="10.25" Y="4" Width="3" />
+    <Position X="6.25" Y="4" Width="3" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>interfaces\IAusleihRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Geldverleih.Repository.interfaces.IKundenRepository">
-    <Position X="9.5" Y="0.75" Width="1.5" />
+    <Position X="5.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAgAAAAAAAA=</HashCode>
       <FileName>interfaces\IKundenRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Geldverleih.Repository.interfaces.IRepository&lt;T&gt;">
-    <Position X="7.75" Y="4.5" Width="1.5" />
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAIA=</HashCode>
       <FileName>interfaces\IRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Geldverleih.Repository.interfaces.IRueckzahlReppository">
-    <Position X="9.25" Y="2.5" Width="3.25" />
+    <Position X="6.25" Y="2.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>interfaces\IRueckzahlReppository.cs</FileName>

@@ -56,25 +56,40 @@ namespace Geldverleih.Tests
         }
 
         [TestMethod]
-        public void RueckgabeWirdInsRepositoryGeschrieben()
+        public void GeldEinzahlungVomKundenKannVorgenommenWerden()
         {
+            //Dummyobjekte werden mit RhinoMock erstellt
+            IAusUndRueckzahlvorgangFactory factory = _mockRepository.StrictMock<IAusUndRueckzahlvorgangFactory>();
+            IKundenRepository kundenRepository = _mockRepository.StrictMock<IKundenRepository>();
+            IRueckzahlReppository rueckzahlReppository = _mockRepository.StrictMock<IRueckzahlReppository>();
+            IAusleihRepository ausleihRepository = _mockRepository.StrictMock<IAusleihRepository>();
 
-            IBankService bankmanager = _mockRepository.StrictMock<IBankService>();
+            //Das wird gebraucht, um die konkrete implementation vom Bankservice zu testen
+            IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository,
+                                                       factory);
 
-            Kunde kunde = new Kunde();
+            
             Guid vorgangsNummer = Guid.NewGuid();
 
+            //Wenn in Factory die Methode CreateRueckzahlVorgangObject aufgerufen wird, so kommt dieses Objekt als Rückgabe zurück.
+            RueckzahlVorgang rueckzahlVorgang = new RueckzahlVorgang { Datum = DateTime.Now, AusleihvorgangNummer = vorgangsNummer, Betrag = 5.5m };
 
+
+            //Aufnahme wird gestartet. Wir schreiben hier alles, was wir beim Aufruf der Methode GeldEinzahlen vom Bankservice erwarten. Was wird aufgerufen, was soll zurückgegeben werden, etc.
             using (_mockRepository.Record())
             {
-                Expect.Call(() => bankmanager.GeldEinzahlen(vorgangsNummer, (decimal) 5.5));
+                Expect.Call(factory.CreateRueckzahlVorgangObject(vorgangsNummer, 5.5m))
+                    .Return(rueckzahlVorgang);
+                Expect.Call(() => rueckzahlReppository.KundeZahltGeldEin(rueckzahlVorgang));
             }
 
+            //Es soll alles wiedergegeben werden.
             _mockRepository.ReplayAll();
 
-            bankmanager.GeldEinzahlen(vorgangsNummer, (decimal) 5.5);
+            //Wiedergabe wurde gestartet
+            bankService.GeldEinzahlen(vorgangsNummer, (decimal) 5.5);
 
-            Assert.IsNotNull(bankmanager);
+            Assert.IsNotNull(bankService);
         }
     }
 }
