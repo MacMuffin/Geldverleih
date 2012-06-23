@@ -48,21 +48,21 @@ namespace Geldverleih.UI.presenters
             string message = "";
 
             if (einzahlResult.Restbetrag <= 0m && einzahlResult.EinzahlvorgangErfolgreich)
-                message = string.Format("Dieser Ausleihvorgang ist komplett abbezahlt! Sie erhalten {0}€ zurück",
+                message = string.Format(Resources.BankPresenter_GeldEingezahlt_VorgangsAbbezahlt_Message,
                                         einzahlResult.Restbetrag);
             else
             {
                 if (einzahlResult.EinzahlvorgangErfolgreich)
-                    message = string.Format("Danke für Ihre einzahlungen. Sie haben noch {0}€ zu zahlen.",
+                    message = string.Format(Resources.BankPresenter_GeldEingezahlt_VorgangBezahltUndRest_Message,
                                             einzahlResult.Restbetrag);
                 else
                     switch (einzahlResult.Error)
                     {
                         case EinzahlError.VorgangBereitsBezahlt:
-                            message = "Dieser Vorgang ist bereits komplett gezahlt!";
+                            message = Resources.BankPresenter_GeldEingezahlt_VorgangIstBereitsKomplettAbbezahlt_Message;
                             break;
                         case EinzahlError.VorgangExistiertNicht:
-                            message = "Dieser Vorgang existiert nicht mehr!";
+                            message = Resources.BankPresenter_GeldEingezahlt_Dieser_Vorgang_existiert_nicht_mehr_Message;
                             break;
                     }
             }

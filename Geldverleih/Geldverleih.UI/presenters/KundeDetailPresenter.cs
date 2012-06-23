@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Windows;
 using Geldverleih.Domain;
 using Geldverleih.Service;
 using Geldverleih.Service.interfaces;
 using Geldverleih.UI.models;
+using Geldverleih.UI.Properties;
 using Geldverleih.UI.views;
 using log4net;
 
@@ -84,7 +84,8 @@ namespace Geldverleih.UI.presenters
             {
                 if (kunde == null)
                 {
-                    MessageBox.Show("Es wurde kein Kunde zum bearbeiten ausgewaehlt");
+                    MessageBox.Show(Resources.KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Message, 
+                        Resources.KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Caption);
                     return;
                 }
 

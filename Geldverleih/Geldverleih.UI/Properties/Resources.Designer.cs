@@ -70,6 +70,42 @@ namespace Geldverleih.UI.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dieser Vorgang existiert nicht mehr! ähnelt.
+        /// </summary>
+        internal static string BankPresenter_GeldEingezahlt_Dieser_Vorgang_existiert_nicht_mehr_Message {
+            get {
+                return ResourceManager.GetString("BankPresenter_GeldEingezahlt_Dieser_Vorgang_existiert_nicht_mehr_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Danke für Ihre einzahlungen. Sie haben noch {0}€ zu zahlen. ähnelt.
+        /// </summary>
+        internal static string BankPresenter_GeldEingezahlt_VorgangBezahltUndRest_Message {
+            get {
+                return ResourceManager.GetString("BankPresenter_GeldEingezahlt_VorgangBezahltUndRest_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dieser Vorgang ist bereits komplett gezahlt! ähnelt.
+        /// </summary>
+        internal static string BankPresenter_GeldEingezahlt_VorgangIstBereitsKomplettAbbezahlt_Message {
+            get {
+                return ResourceManager.GetString("BankPresenter_GeldEingezahlt_VorgangIstBereitsKomplettAbbezahlt_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dieser Ausleihvorgang ist komplett abbezahlt! Sie erhalten {0}€ zurück ähnelt.
+        /// </summary>
+        internal static string BankPresenter_GeldEingezahlt_VorgangsAbbezahlt_Message {
+            get {
+                return ResourceManager.GetString("BankPresenter_GeldEingezahlt_VorgangsAbbezahlt_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ausleihvorgänge zum Kunden können nicht ausgelesen werden, da die KundenNummer ungültig ist. ähnelt.
         /// </summary>
         internal static string BankPresenter_GetAlleAusleihvorgaengeByKundenNummer_Ausleihvorgänge_zum_Kunden_können_nicht_ausgelesen_werden__da_die_KundenNummer_ungültig_ist {
@@ -86,6 +122,42 @@ namespace Geldverleih.UI.Properties {
             get {
                 return ResourceManager.GetString("BankPresenter_GetAlleEingezahltenVorgaengeZurVorgangsNummer_Eingezahlten_Vorgänge" +
                         "_können_nicht_ausgelesen_werde__da_die_Vorgangsnummer_ungültig_ist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ausleihvorgang auswählen. ähnelt.
+        /// </summary>
+        internal static string KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Caption {
+            get {
+                return ResourceManager.GetString("KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Es wurde kein Vorgang ausgewaehlt, zu dem Geld zurückgezahlt werden kann. ähnelt.
+        /// </summary>
+        internal static string KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Message {
+            get {
+                return ResourceManager.GetString("KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Kunden wählen. ähnelt.
+        /// </summary>
+        internal static string KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Caption {
+            get {
+                return ResourceManager.GetString("KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Es wurde kein Kunde zum bearbeiten ausgewaehlt ähnelt.
+        /// </summary>
+        internal static string KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Message {
+            get {
+                return ResourceManager.GetString("KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Message", resourceCulture);
             }
         }
         

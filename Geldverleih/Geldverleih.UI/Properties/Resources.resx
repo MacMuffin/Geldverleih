@@ -135,4 +135,28 @@
 	<data name="MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Caption">
 		<value xml:space="preserve">Bitte Datum auswählen.</value>
 	</data>
+	<data name="KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Message">
+		<value xml:space="preserve">Es wurde kein Vorgang ausgewaehlt, zu dem Geld zurückgezahlt werden kann.</value>
+	</data>
+	<data name="KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Caption">
+		<value xml:space="preserve">Ausleihvorgang auswählen.</value>
+	</data>
+	<data name="BankPresenter_GeldEingezahlt_VorgangsAbbezahlt_Message">
+		<value xml:space="preserve">Dieser Ausleihvorgang ist komplett abbezahlt! Sie erhalten {0}€ zurück</value>
+	</data>
+	<data name="BankPresenter_GeldEingezahlt_VorgangBezahltUndRest_Message">
+		<value xml:space="preserve">Danke für Ihre einzahlungen. Sie haben noch {0}€ zu zahlen.</value>
+	</data>
+	<data name="BankPresenter_GeldEingezahlt_VorgangIstBereitsKomplettAbbezahlt_Message">
+		<value xml:space="preserve">Dieser Vorgang ist bereits komplett gezahlt!</value>
+	</data>
+	<data name="BankPresenter_GeldEingezahlt_Dieser_Vorgang_existiert_nicht_mehr_Message">
+		<value xml:space="preserve">Dieser Vorgang existiert nicht mehr!</value>
+	</data>
+	<data name="KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Message">
+		<value xml:space="preserve">Es wurde kein Kunde zum bearbeiten ausgewaehlt</value>
+	</data>
+	<data name="KundeDetailPresenter_KundeBearbeitenDetailView_KundenAuswaehlen_Caption">
+		<value xml:space="preserve">Kunden wählen.</value>
+	</data>
 </root>

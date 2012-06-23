@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Geldverleih.Domain;
 using Geldverleih.UI.models;
 using Geldverleih.UI.presenters;
@@ -99,7 +91,8 @@ namespace Geldverleih.UI
 
             if (ausleihVorgang == null)
             {
-                MessageBox.Show("Es wurde kein Vorgang ausgewaehlt, zu dem Geld zurückgezahlt werden kann.");
+                MessageBox.Show(Properties.Resources.KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Message, 
+                    Properties.Resources.KundeDetailansicht_GeldEinzahlenButton_Click_KeinVorgangAusgewaehlt_Caption);
                 return;
             }
             _kundeDetailPresenter.GeldEinzahlenViewLaden(ausleihVorgang.VorgangsNummer);

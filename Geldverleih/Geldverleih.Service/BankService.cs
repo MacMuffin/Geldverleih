@@ -63,7 +63,7 @@ namespace Geldverleih.Service
 
             if (!IstKundeInDerDatenbank(alleKunden, kundenNummer))
                 throw new ApplicationException(
-                    string.Format("Der kunde {0} existiert nicht in der Datenbank! Bitte vorher anlegen",
+                    string.Format("Der Kunde {0} existiert nicht in der Datenbank! Bitte vorher anlegen",
                                   kundenNummer));
         }
 
