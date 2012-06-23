@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Geldverleih.Domain;
@@ -77,6 +78,11 @@ namespace Geldverleih.UI.presenters
             log4net.Config.XmlConfigurator.Configure();
 
             Log.Warn("Test");
+        }
+
+        public IList<RueckzahlVorgang> GetAlleEingezahltenVorgaengeZurVorgangsNummer(Guid vorgangsNummer)
+        {
+            return _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
         }
     }
 }

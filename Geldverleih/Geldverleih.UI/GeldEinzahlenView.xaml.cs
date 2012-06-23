@@ -32,7 +32,8 @@ namespace Geldverleih.UI
         public void Initialisieren(BankPresenter bankPresenter)
         {
             _bankPresenter = bankPresenter;
-            VorgangsNummerBarItem.Content = _vorgangsNummer;
+            VorgangsNummerBarItem.Content += _vorgangsNummer.ToString();
+            BereitsEingezahlteVorgaengeGrid.ItemsSource = _bankPresenter.GetAlleEingezahltenVorgaengeZurVorgangsNummer(_vorgangsNummer);
         }
 
         private void EinzahlenButton_Click(object sender, RoutedEventArgs e)
