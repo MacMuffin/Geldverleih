@@ -5,6 +5,7 @@ using System.Linq;
 using Geldverleih.Domain;
 using Geldverleih.Service.interfaces;
 using Geldverleih.UI.Logik;
+using Geldverleih.UI.views;
 using log4net;
 
 namespace Geldverleih.UI.presenters
@@ -16,11 +17,13 @@ namespace Geldverleih.UI.presenters
 
         private readonly IBankService _bankService;
         private readonly IZinsRechner _zinsRechner;
+        private readonly IEinzahlungsView _einzahlungsView;
 
-        public BankPresenter(IBankService bankService, IZinsRechner zinsRechner)
+        public BankPresenter(IBankService bankService, IZinsRechner zinsRechner, IEinzahlungsView einzahlungsView)
         {
             _bankService = bankService;
             _zinsRechner = zinsRechner;
+            _einzahlungsView = einzahlungsView;
         }
 
         public void GeldEinzahlen(Guid vorgangsNummer, decimal betrag)
@@ -36,7 +39,40 @@ namespace Geldverleih.UI.presenters
                                                                                          EndDatum = DateTime.Now
                                                                                      });
 
-            EingezahltenBetragVomZuZahlendenBetragAbziehen(zuZahlenderBetrag, betrag, vorgangsNummer);
+            EinzahlResult result = EingezahltenBetragVomZuZahlendenBetragAbziehen(zuZahlenderBetrag, betrag, vorgangsNummer);
+            GeldEingezahlt(result);
+        }
+
+        private void GeldEingezahlt(EinzahlResult einzahlResult)
+        {
+            string message = "";
+
+            if (einzahlResult.Restbetrag <= 0m && einzahlResult.EinzahlvorgangErfolgreich)
+                message = string.Format("Dieser Ausleihvorgang ist komplett abbezahlt! Sie erhalten {0}€ zurück",
+                                        einzahlResult.Restbetrag);
+            else
+            {
+                if (einzahlResult.EinzahlvorgangErfolgreich)
+                {
+                    message = string.Format("Danke für Ihre einzahlungen. Sie haben noch {0}€ zu zahlen.",
+                                        einzahlResult.Restbetrag);
+                }
+
+                else
+                {
+                    switch (einzahlResult.Error)
+                    {
+                        case EinzahlError.VorgangBereitsBezahlt:
+                            message = "Dieser Vorgang ist bereits komplett gezahlt!";
+                            break;
+                        case EinzahlError.VorgangExistiertNicht:
+                            message = "Dieser Vorgang existiert nicht mehr!";
+                            break;
+                    }
+                }
+            }
+
+            _einzahlungsView.EinzahlungAbgeschlossenResult(message);
         }
 
         public EinzahlResult EingezahltenBetragVomZuZahlendenBetragAbziehen(decimal zuZahlenderBetrag, decimal eingezahlterBetrag, Guid vorgangsNummer)
@@ -46,7 +82,7 @@ namespace Geldverleih.UI.presenters
 
             decimal restBetrag = zuZahlenderBetrag - eingezahlterBetrag;
 
-            if (restBetrag.ToString().Contains("-"))
+            if (restBetrag < 0.0m)
             {
                 decimal tatsaechlichZuZahlenderBetrag = eingezahlterBetrag + restBetrag;
                 _bankService.GeldEinzahlen(vorgangsNummer, tatsaechlichZuZahlenderBetrag);

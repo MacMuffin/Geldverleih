@@ -17,24 +17,37 @@ namespace Geldverleih.UI.Logik
 
         public decimal BetragMitZinsenFuerZeitraumBerechnen(decimal betrag, decimal zinsSatz, Guid vorgangsNummer, ZeitSpanne zeitSpanne)
         {
-            DateTime startDatum = zeitSpanne.StartDatum;
-            TimeSpan timeSpan = zeitSpanne.EndDatum.Subtract(startDatum);
+            DateTime startDatum = zeitSpanne.StartDatum.Date;
+            TimeSpan timeSpan = zeitSpanne.EndDatum.Date.Subtract(startDatum);
             int days = timeSpan.Days;
             decimal zuZahlenderBetrag = 0m;
 
             IList<RueckzahlVorgang> rueckzahlVorgaenge = _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
+            IEnumerable<RueckzahlVorgang> rueckzahlungenFuerDatum;
 
-            for (int ausleihTag = 0; ausleihTag <= days; ausleihTag++)
+            if (days == 0)
             {
-                var ruecklaungenFuerDatum = rueckzahlVorgaenge.Where(rueckzahlVorgang => DatumIstGleich(rueckzahlVorgang, startDatum));
-                betrag = ruecklaungenFuerDatum.Aggregate(betrag, (current, rueckzahlVorgang) => current - rueckzahlVorgang.Betrag);
+                rueckzahlungenFuerDatum = rueckzahlVorgaenge.Where(rueckzahlVorgang => DatumIstGleich(rueckzahlVorgang, startDatum));
+                betrag = rueckzahlungenFuerDatum.Aggregate(betrag, (current, rueckzahlVorgang) => current - rueckzahlVorgang.Betrag);
+            }
+            else
+            {
+                for (int ausleihTag = 1; ausleihTag <= days; ausleihTag++)
+                {
+                    rueckzahlungenFuerDatum = rueckzahlVorgaenge.Where(rueckzahlVorgang => DatumIstGleich(rueckzahlVorgang, startDatum.AddDays(ausleihTag)));
+                    betrag = rueckzahlungenFuerDatum.Aggregate(betrag, (current, rueckzahlVorgang) => current - rueckzahlVorgang.Betrag);
 
-                decimal tagesZinsen = DreisatzAnwenden(betrag, zinsSatz);
+                    decimal tagesZinsen = DreisatzAnwenden(betrag, zinsSatz);
 
-                zuZahlenderBetrag = zuZahlenderBetrag + tagesZinsen;
+                    zuZahlenderBetrag = zuZahlenderBetrag + tagesZinsen;
+                }
             }
 
             zuZahlenderBetrag += betrag;
+
+            if (zuZahlenderBetrag <= 0.0m)
+                return 0.0m;
+
 
             return zuZahlenderBetrag;
         }

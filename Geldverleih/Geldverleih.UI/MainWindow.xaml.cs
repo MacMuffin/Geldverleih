@@ -42,7 +42,8 @@ namespace Geldverleih.UI
             _kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
             _zinssatzFactory = geldverleihUnityContainer.UnityContainer.Resolve<IZinssatzFactory>();
             _kundenUebersichtPresenter = new KundenUebersichtPresenter(_kundenService);
-            _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>());
+            _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>(), 
+                new GeldEinzahlenView());
 
             KundenUebersichtAktualisieren();
         }

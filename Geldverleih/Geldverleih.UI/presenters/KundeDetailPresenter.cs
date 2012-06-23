@@ -72,9 +72,9 @@ namespace Geldverleih.UI.presenters
 
         public void GeldEinzahlenViewLaden(Guid vorgangsNummer)
         {
-            GeldEinzahlenView geldEinzahlenView = new GeldEinzahlenView(vorgangsNummer);
+            GeldEinzahlenView geldEinzahlenView = new GeldEinzahlenView();
 
-            geldEinzahlenView.Initialisieren(_bankPresenter);
+            geldEinzahlenView.Initialisieren(_bankPresenter, vorgangsNummer);
 
             geldEinzahlenView.ShowDialog();
         }
