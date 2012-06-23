@@ -97,7 +97,14 @@ namespace Geldverleih.UI
 
         private void GeldEinzahlenButton_Click(object sender, RoutedEventArgs e)
         {
-            _kundeDetailPresenter.GeldEinzahlenViewLaden(((AusleihVorgang)AusleihvorgaengeKundeGrid.SelectedItem).VorgangsNummer);
+            AusleihVorgang ausleihVorgang = (AusleihVorgang)AusleihvorgaengeKundeGrid.SelectedItem;
+
+            if (ausleihVorgang == null)
+            {
+                MessageBox.Show("Es wurde kein Vorgang ausgewaehlt, zu dem Geld zurückgezahlt werden kann.");
+                return;
+            }
+            _kundeDetailPresenter.GeldEinzahlenViewLaden(ausleihVorgang.VorgangsNummer);
         }
     }
 }

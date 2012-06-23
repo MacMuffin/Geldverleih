@@ -30,7 +30,7 @@
                 <Grid>
                     <DataGrid AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="-1,151,0,0" Name="AusleihvorgaengeKundeGrid" Width="417" />
                     <Button Content="Betrag Ausleihen" Height="38" HorizontalAlignment="Left" Margin="313,102,0,0" Name="AusleihenButton" VerticalAlignment="Top" Width="103" Click="AusleihenButton_Click" />
-                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="0,110,0,0" Name="ZinssatzComboBox" VerticalAlignment="Top" Width="120" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="0,110,0,0" Name="ZinssatzComboBox" VerticalAlignment="Top" Width="120" SelectedIndex="1" />
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="174,110,0,0" Name="LeihbetragTextbox" VerticalAlignment="Top" Width="120" />
                     <Label Content="Zinssatz" Height="28" HorizontalAlignment="Left" Margin="-1,79,0,0" Name="ZinssatzLabel" VerticalAlignment="Top" />
                     <Label Content="Leihbetrag" Height="28" HorizontalAlignment="Left" Margin="174,79,0,0" Name="LeihbetragLabel" VerticalAlignment="Top" />

@@ -20,6 +20,7 @@ using Geldverleih.UI.Logik;
 using Geldverleih.UI.presenters;
 using Geldverleih.UI.views;
 using Geldverleih.Unity;
+using log4net;
 using Microsoft.Practices.Unity;
 
 namespace Geldverleih.UI
@@ -34,18 +35,40 @@ namespace Geldverleih.UI
         private readonly BankPresenter _bankPresenter;
         private IZinssatzFactory _zinssatzFactory;
 
+
+        protected static readonly ILog Log = LogManager.GetLogger(typeof(GeldEinzahlenView));
+
+        public void FehlerLoggen(string message)
+        {
+            log4net.Config.XmlConfigurator.Configure();
+
+            Log.Error(message);
+        }
+
         public MainWindow()
         {
             InitializeComponent();
-            GeldverleihUnityContainer geldverleihUnityContainer = new GeldverleihUnityContainer();
+            try
+            {
+                GeldverleihUnityContainer geldverleihUnityContainer = new GeldverleihUnityContainer();
 
-            _kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
-            _zinssatzFactory = geldverleihUnityContainer.UnityContainer.Resolve<IZinssatzFactory>();
-            _kundenUebersichtPresenter = new KundenUebersichtPresenter(_kundenService);
-            _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>(), 
-                new GeldEinzahlenView());
+                _kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
+                _zinssatzFactory = geldverleihUnityContainer.UnityContainer.Resolve<IZinssatzFactory>();
+                _kundenUebersichtPresenter = new KundenUebersichtPresenter(_kundenService);
+                _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>(), 
+                                                   new GeldEinzahlenView());
 
-            KundenUebersichtAktualisieren();
+                KundenUebersichtAktualisieren();
+                StatistikAktualisieren();
+            }
+            catch (Exception exception)
+            {
+                FehlerLoggen(exception.Message);
+            }
+        }
+
+        private void StatistikAktualisieren()
+        {
         }
 
         public void KundenUebersichtAktualisieren()
@@ -58,22 +81,36 @@ namespace Geldverleih.UI
 
         private void AddKundeButton_Click(object sender, RoutedEventArgs e)
         {
-            IKundeDetailView kundeDetailView = new KundeDetailansicht();
-            KundeDetailPresenter kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
+            try
+            {
+                IKundeDetailView kundeDetailView = new KundeDetailansicht();
+                KundeDetailPresenter kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
 
-            kundeDetailPresenter.NeuerKundeDetailView();
-            KundenUebersichtAktualisieren();
+                kundeDetailPresenter.NeuerKundeDetailView();
+                KundenUebersichtAktualisieren();
+            }
+            catch (Exception exception)
+            {
+                FehlerLoggen(exception.Message);
+            }
         }
 
         private void EditKundeButton_Click(object sender, RoutedEventArgs e)
         {
-            Kunde ausgewaehlterKunde = (Kunde)KundenDataGrid.SelectedItem;
+            try
+            {
+                Kunde ausgewaehlterKunde = (Kunde)KundenDataGrid.SelectedItem;
 
-            IKundeDetailView kundeDetailView = new KundeDetailansicht();
-            KundeDetailPresenter kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
+                IKundeDetailView kundeDetailView = new KundeDetailansicht();
+                KundeDetailPresenter kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
 
-            kundeDetailPresenter.KundeBearbeitenDetailView(ausgewaehlterKunde);
-            KundenUebersichtAktualisieren();
+                kundeDetailPresenter.KundeBearbeitenDetailView(ausgewaehlterKunde);
+                KundenUebersichtAktualisieren();
+            }
+            catch (Exception exception)
+            {
+                FehlerLoggen(exception.Message);
+            }
         }
     }
 }

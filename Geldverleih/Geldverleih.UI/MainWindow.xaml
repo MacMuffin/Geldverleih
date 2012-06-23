@@ -51,7 +51,7 @@
             </TabItem>
             <TabItem Name="StatistikTab" Header="Stastiken">
                 <Grid Name="grid1" Margin="0,0,0,0">
-                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="13,79,0,0" Name="comboBox1" VerticalAlignment="Top" Width="151" SelectedIndex="0">
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="13,79,0,0" Name="EinnahmenSortierenNachComboBox" VerticalAlignment="Top" Width="151" SelectedIndex="0">
                         <ComboBoxItem Content="Tag" />
                     </ComboBox>
                     <Label Content="Einnahmen:" Height="28" HorizontalAlignment="Left" Margin="13,117,0,0" Name="EinnahmenLabel" VerticalAlignment="Top" />

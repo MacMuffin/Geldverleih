@@ -12,9 +12,6 @@ namespace Geldverleih.UI.presenters
 {
     public class BankPresenter
     {
-        protected static readonly ILog Log = LogManager.GetLogger(typeof(BankPresenter));
-
-
         private readonly IBankService _bankService;
         private readonly IZinsRechner _zinsRechner;
         private readonly IEinzahlungsView _einzahlungsView;
@@ -96,6 +93,9 @@ namespace Geldverleih.UI.presenters
 
         public void GeldAusleihen(Kunde kunde, VerleihKondition kondition, decimal betrag)
         {
+            if (kunde == null)
+                throw new ArgumentNullException("kunde", "Dieser Kunde existiert nicht.");
+
             _bankService.GeldAusleihen(kunde.Kundennummer, kondition, betrag);
         }
 
@@ -106,18 +106,19 @@ namespace Geldverleih.UI.presenters
 
         public IList<AusleihVorgang> GetAlleAusleihvorgaengeByKundenNummer(Guid kundenNummer)
         {
+            if (kundenNummer == Guid.Empty)
+                throw new ArgumentNullException("kundenNummer",
+                                                "Ausleihvorgänge zum Kunden können nicht ausgelesen werden, da die KundenNummer ungültig ist.");
+
             return _bankService.GetAlleAusleihvorgaengeByKundenNummer(kundenNummer);
-        }
-
-        public void TestLogEintrag()
-        {
-            log4net.Config.XmlConfigurator.Configure();
-
-            Log.Warn("Test");
         }
 
         public IList<RueckzahlVorgang> GetAlleEingezahltenVorgaengeZurVorgangsNummer(Guid vorgangsNummer)
         {
+            if (vorgangsNummer == Guid.Empty)
+                throw new ArgumentNullException("vorgangsNummer",
+                    "Eingezahlten Vorgänge können nicht ausgelesen werde, da die Vorgangsnummer ungültig ist.");
+
             return _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
         }
     }

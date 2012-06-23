@@ -18,8 +18,7 @@ namespace Geldverleih.UI.Logik
         public decimal BetragMitZinsenFuerZeitraumBerechnen(decimal betrag, decimal zinsSatz, Guid vorgangsNummer, ZeitSpanne zeitSpanne)
         {
             DateTime startDatum = zeitSpanne.StartDatum.Date;
-            TimeSpan timeSpan = zeitSpanne.EndDatum.Date.Subtract(startDatum);
-            int days = timeSpan.Days;
+            int days = GetDays(zeitSpanne.EndDatum, startDatum);
             decimal zuZahlenderBetrag = 0m;
 
             IList<RueckzahlVorgang> rueckzahlVorgaenge = _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
@@ -52,6 +51,12 @@ namespace Geldverleih.UI.Logik
             return zuZahlenderBetrag;
         }
 
+        private int GetDays(DateTime endDatum, DateTime startDatum)
+        {
+            TimeSpan timeSpan = endDatum.Date.Subtract(startDatum.Date);
+            return timeSpan.Days;
+        }
+
         private bool DatumIstGleich(RueckzahlVorgang rueckzahlVorgang, DateTime startDatum)
         {
             return DateTime.Compare(rueckzahlVorgang.Datum.Date, startDatum.Date) == 0;
@@ -65,6 +70,14 @@ namespace Geldverleih.UI.Logik
         public decimal GetEingenommeneZinsenImZeitraum(decimal betrag, decimal zinsSatz, Guid vorgangsNummer,
                                                        ZeitSpanne zeitSpanne)
         {
+            int tage = 1;
+
+            IList<AusleihVorgang> alleAusleihvorgaenge = _bankService.GetAlleAusleihvorgaenge();
+
+            var ausleihvorgaengeZumDatum = alleAusleihvorgaenge.Where(ausleihVorgang => ausleihVorgang.Datum.Date == zeitSpanne.StartDatum.Date).ToList();
+
+            _bankService.GetAlleNochNichtBezahltenVorgaengeBisDatum(zeitSpanne.EndDatum.Date);
+
             throw new NotImplementedException();
         }
     }

@@ -2,6 +2,7 @@
 using System.Windows;
 using Geldverleih.UI.presenters;
 using Geldverleih.UI.views;
+using log4net;
 
 namespace Geldverleih.UI
 {
@@ -19,17 +20,40 @@ namespace Geldverleih.UI
             
         }
 
+        protected static readonly ILog Log = LogManager.GetLogger(typeof(GeldEinzahlenView));
+
+        public void FehlerLoggen(string message)
+        {
+            log4net.Config.XmlConfigurator.Configure();
+
+            Log.Error(message);
+        }
+
         public void Initialisieren(BankPresenter bankPresenter, Guid vorgangsNummer)
         {
-            _bankPresenter = bankPresenter;
-            _vorgangsNummer = vorgangsNummer;
-            VorgangsNummerBarItem.Content += _vorgangsNummer.ToString();
-            Aktualisieren();
+            try
+            {
+                _bankPresenter = bankPresenter;
+                _vorgangsNummer = vorgangsNummer;
+                VorgangsNummerBarItem.Content += _vorgangsNummer.ToString();
+                Aktualisieren();
+            }
+            catch (Exception exception)
+            {
+                FehlerLoggen(exception.Message);
+            }
         }
 
         private void EinzahlenButton_Click(object sender, RoutedEventArgs e)
         {
-            _bankPresenter.GeldEinzahlen(_vorgangsNummer, Convert.ToDecimal(EinzahlbetragTextbox.Text));
+            try
+            {
+                _bankPresenter.GeldEinzahlen(_vorgangsNummer, Convert.ToDecimal(EinzahlbetragTextbox.Text));
+            }
+            catch (Exception exception)
+            {
+                FehlerLoggen(exception.Message);
+            }
         }
 
         public void EinzahlungAbgeschlossenResult(string result)
@@ -39,7 +63,14 @@ namespace Geldverleih.UI
 
         public void Aktualisieren()
         {
-            BereitsEingezahlteVorgaengeGrid.ItemsSource = _bankPresenter.GetAlleEingezahltenVorgaengeZurVorgangsNummer(_vorgangsNummer);
+            try
+            {
+                BereitsEingezahlteVorgaengeGrid.ItemsSource = _bankPresenter.GetAlleEingezahltenVorgaengeZurVorgangsNummer(_vorgangsNummer);
+            }
+            catch (Exception exception)
+            {
+                FehlerLoggen(exception.Message);
+            }
         }
     }
 }
