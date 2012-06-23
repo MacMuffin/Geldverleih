@@ -104,5 +104,10 @@ namespace Geldverleih.UI
             }
             _kundeDetailPresenter.GeldEinzahlenViewLaden(ausleihVorgang.VorgangsNummer);
         }
+
+        private void PLZTextbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !Char.IsNumber(e.Text.ToCharArray().First());
+        }
     }
 }

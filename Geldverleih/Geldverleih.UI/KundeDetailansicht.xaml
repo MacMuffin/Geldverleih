@@ -14,7 +14,7 @@
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="10,110,0,0" Name="VornameTextbox" VerticalAlignment="Top" Width="120" />
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="195,110,0,0" Name="NameTextbox" VerticalAlignment="Top" Width="120" />
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="10,175,0,0" Name="AdresseTextbox" VerticalAlignment="Top" Width="120" />
-                    <TextBox Height="23" HorizontalAlignment="Left" Margin="10,239,0,0" Name="PLZTextbox" VerticalAlignment="Top" Width="120" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="10,239,0,0" Name="PLZTextbox" VerticalAlignment="Top" Width="120" MaxLength="5" PreviewTextInput="PLZTextbox_PreviewTextInput" />
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="195,239,0,0" Name="WohnortTextbox" VerticalAlignment="Top" Width="120" />
                     <ToolBar Height="60" HorizontalAlignment="Left" Name="toolBar1" VerticalAlignment="Top" Width="418">
                         <Button Name="SpeichernButton" Click="SpeichernButton_Click">
