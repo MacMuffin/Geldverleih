@@ -43,16 +43,14 @@ namespace Geldverleih.UI
         private void SpeichernButton_Click(object sender, RoutedEventArgs e)
         {
             if (KundeDetailAnsicht.Kunde == null)
-            {
-                KundeDetailAnsicht.Kunde = new Kunde
-                                               {
-                                                   Adresse = AdresseTextbox.Text,
-                                                   Name = NameTextbox.Text,
-                                                   Vorname = VornameTextbox.Text,
-                                                   PLZ = Convert.ToInt32(PLZTextbox.Text),
-                                                   Wohnort = WohnortTextbox.Text
-                                               };
-            }
+                KundeDetailAnsicht.Kunde = new Kunde();
+
+            KundeDetailAnsicht.Kunde.Adresse = AdresseTextbox.Text;
+            KundeDetailAnsicht.Kunde.Name = NameTextbox.Text;
+            KundeDetailAnsicht.Kunde.Vorname = VornameTextbox.Text;
+            KundeDetailAnsicht.Kunde.Wohnort = WohnortTextbox.Text;
+            KundeDetailAnsicht.Kunde.PLZ = Convert.ToInt32(PLZTextbox.Text);
+
             _kundeDetailPresenter.KundenSpeichern();
             Close();
         }

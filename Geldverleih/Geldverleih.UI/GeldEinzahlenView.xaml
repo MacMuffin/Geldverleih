@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="GeldEinzahlenView" Height="377" Width="548">
     <Grid>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="1,44,0,0" Name="EinzahlbetragTextbox" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="2,44,0,0" Name="EinzahlbetragTextbox" VerticalAlignment="Top" Width="120" />
         <Label Content="Betrag zum einzahlen" Height="28" HorizontalAlignment="Left" Margin="1,10,0,0" Name="EinzahlbetragLabel" VerticalAlignment="Top" />
         <Button Content="Einzahlen" Height="48" HorizontalAlignment="Left" Margin="160,19,0,0" Name="EinzahlenButton" VerticalAlignment="Top" Width="95" Click="EinzahlenButton_Click" />
-        <DataGrid AutoGenerateColumns="True" Height="222" HorizontalAlignment="Left" Margin="0,88,0,0" Name="BereitsEingezahlteVorgaengeGrid" VerticalAlignment="Top" Width="526" />
+        <DataGrid AutoGenerateColumns="True" Height="222" HorizontalAlignment="Left" Margin="1,88,0,0" Name="BereitsEingezahlteVorgaengeGrid" VerticalAlignment="Top" Width="526" />
         <StatusBar Height="30" HorizontalAlignment="Left" Margin="1,308,0,0" Name="VorgangsStatusBar" Background="#FFA5C140" VerticalAlignment="Top" Width="525">
             <StatusBarItem Name="VorgangsNummerBarItem" Content="Vorgangsnummer: "></StatusBarItem>
         </StatusBar>

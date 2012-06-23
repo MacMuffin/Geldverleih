@@ -12,6 +12,5 @@ namespace Geldverleih.Service.interfaces
         IList<AusleihVorgang> GetAlleAusleihvorgaengeByKundenNummer(Guid kundenNummer);
         AusleihVorgang GetAusleihvorgangByVorgangsnummer(Guid vorgangsnummer);
         IList<RueckzahlVorgang> GetAlleRueckzahlvorgaengeByVorgangsNummer(Guid vorgangsNummer);
-        void GetAlleNochNichtBezahltenVorgaengeBisDatum(DateTime date);
     }
 }

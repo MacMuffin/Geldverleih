@@ -57,17 +57,6 @@ namespace Geldverleih.Service
             return _rueckzahlReppository.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
         }
 
-        public void GetAlleNochNichtBezahltenVorgaengeBisDatum(DateTime date)
-        {
-            List<AusleihVorgang> ausleihVorgaengeBisDatum = _ausleihRepository.GetAlleAusleihVorgaenge().Where(ausleihVorgang => ausleihVorgang.Datum.Date <= date).
-                ToList();
-
-            foreach (AusleihVorgang ausleihVorgang in ausleihVorgaengeBisDatum)
-            {
-                
-            }
-        }
-
         private void KundenAufVerfuegbarkeitPruefen(Guid kundenNummer)
         {
             IList<Kunde> alleKunden = _kundenRepository.GetAlleKunden();

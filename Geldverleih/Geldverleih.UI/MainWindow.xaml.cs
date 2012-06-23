@@ -37,6 +37,7 @@ namespace Geldverleih.UI
 
 
         protected static readonly ILog Log = LogManager.GetLogger(typeof(GeldEinzahlenView));
+        private readonly IZinsRechner _zinsRechner;
 
         public void FehlerLoggen(string message)
         {
@@ -55,11 +56,12 @@ namespace Geldverleih.UI
                 _kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
                 _zinssatzFactory = geldverleihUnityContainer.UnityContainer.Resolve<IZinssatzFactory>();
                 _kundenUebersichtPresenter = new KundenUebersichtPresenter(_kundenService);
-                _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>(), 
+                _zinsRechner = geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>();
+                _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), _zinsRechner, 
                                                    new GeldEinzahlenView());
 
                 KundenUebersichtAktualisieren();
-                StatistikAktualisieren();
+                
             }
             catch (Exception exception)
             {
@@ -69,6 +71,31 @@ namespace Geldverleih.UI
 
         private void StatistikAktualisieren()
         {
+            DateTime? startDatum = EinnahmeVonDatePicker.SelectedDate;
+            DateTime? endDatum = EinnahmenBisDatePicker.SelectedDate;
+
+            if (startDatum == null || endDatum == null)
+            {
+                MessageBox.Show("Kein Datum ausgewahelt!", "Bitte Datum auswählen.");
+                return;
+            }
+
+            if (!IstStartdatumKleinerGleichEnddatum())
+                MessageBox.Show("Das Startdatum kann nicht später beginnen wie das Enddatum.");
+
+            ZeitSpanne heute = new ZeitSpanne { StartDatum = (DateTime) startDatum, EndDatum = (DateTime) endDatum };
+            ZinsenEinnahmenTextblock.Text =
+                _zinsRechner.GetEingenommeneZinsenImZeitraum(heute)
+                    .ToString();
+
+            VerliehenesGeldTextblock.Text = _zinsRechner.GetAusgezahltesGeldFuerZeitraum(heute).ToString();
+
+            EinnahmenTextblock.Text = _zinsRechner.GetRueckgezahlteBetraegeFuerZeitraum(heute).ToString();
+        }
+
+        private bool IstStartdatumKleinerGleichEnddatum()
+        {
+            return EinnahmeVonDatePicker.SelectedDate.Value.Date <= EinnahmenBisDatePicker.SelectedDate.Value.Date;
         }
 
         public void KundenUebersichtAktualisieren()
@@ -111,6 +138,11 @@ namespace Geldverleih.UI
             {
                 FehlerLoggen(exception.Message);
             }
+        }
+
+        private void AuswertenButton_Click(object sender, RoutedEventArgs e)
+        {
+            StatistikAktualisieren();
         }
     }
 }
