@@ -36,12 +36,19 @@
         <TabControl>
             <TabItem Header="Kundenübersicht" Name="KundenuebersichtTab">
                 <DockPanel LastChildFill="True">
-                    <DataGrid AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="-3,2,0,0" Name="KundenDataGrid" VerticalAlignment="Top">
+                    <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="-3,2,0,0" Name="KundenDataGrid" VerticalAlignment="Top">
                         <DataGrid.Resources>
                             <Style TargetType="{x:Type DataGridColumnHeader}">
                                 <Setter Property="Control.Background" Value="#5FBA27" />
                             </Style>
                         </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=Vorname}" Header="Vorname" MinWidth="100"/>
+                            <DataGridTextColumn Binding="{Binding Path=Name}" Header="Name" MinWidth="100"/>
+                            <DataGridTextColumn Binding="{Binding Path=Adresse}" Header="Adresse" MinWidth="120"/>
+                            <DataGridTextColumn Binding="{Binding Path=PLZ}" Header="PLZ" MinWidth="20"/>
+                            <DataGridTextColumn Binding="{Binding Path=Wohnort}" Header="Wohnort" MinWidth="80"/>
+                        </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
             </TabItem>

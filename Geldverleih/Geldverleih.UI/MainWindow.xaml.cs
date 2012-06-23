@@ -1,19 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Geldverleih.Domain;
-using Geldverleih.Repository;
-using Geldverleih.Repository.interfaces;
 using Geldverleih.Service;
 using Geldverleih.Service.interfaces;
 using Geldverleih.UI.Logik;
@@ -33,7 +21,7 @@ namespace Geldverleih.UI
         private readonly KundenUebersichtPresenter _kundenUebersichtPresenter;
         private readonly IKundenService _kundenService;
         private readonly BankPresenter _bankPresenter;
-        private IZinssatzFactory _zinssatzFactory;
+        private readonly IZinssatzFactory _zinssatzFactory;
 
 
         protected static readonly ILog Log = LogManager.GetLogger(typeof(GeldEinzahlenView));
@@ -51,14 +39,13 @@ namespace Geldverleih.UI
             InitializeComponent();
             try
             {
-                GeldverleihUnityContainer geldverleihUnityContainer = new GeldverleihUnityContainer();
+                var geldverleihUnityContainer = new GeldverleihUnityContainer();
 
                 _kundenService = geldverleihUnityContainer.UnityContainer.Resolve<IKundenService>();
                 _zinssatzFactory = geldverleihUnityContainer.UnityContainer.Resolve<IZinssatzFactory>();
                 _kundenUebersichtPresenter = new KundenUebersichtPresenter(_kundenService);
                 _zinsRechner = geldverleihUnityContainer.UnityContainer.Resolve<IZinsRechner>();
-                _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), _zinsRechner, 
-                                                   new GeldEinzahlenView());
+                _bankPresenter = new BankPresenter(geldverleihUnityContainer.UnityContainer.Resolve<IBankService>(), _zinsRechner);
 
                 KundenUebersichtAktualisieren();
                 
@@ -74,14 +61,16 @@ namespace Geldverleih.UI
             DateTime? startDatum = EinnahmeVonDatePicker.SelectedDate;
             DateTime? endDatum = EinnahmenBisDatePicker.SelectedDate;
 
-            if (startDatum == null || endDatum == null)
+            if (!IstDatumAusgewaehlt(startDatum, endDatum))
             {
-                MessageBox.Show("Kein Datum ausgewahelt!", "Bitte Datum auswählen.");
+                MessageBox.Show(Properties.Resources.MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Message, 
+                    Properties.Resources.MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Caption);
                 return;
             }
 
             if (!IstStartdatumKleinerGleichEnddatum())
-                MessageBox.Show("Das Startdatum kann nicht später beginnen wie das Enddatum.");
+                MessageBox.Show(Properties.Resources.MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Message, 
+                    Properties.Resources.MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Caption);
 
             ZeitSpanne heute = new ZeitSpanne { StartDatum = (DateTime) startDatum, EndDatum = (DateTime) endDatum };
             ZinsenEinnahmenTextblock.Text =
@@ -93,6 +82,11 @@ namespace Geldverleih.UI
             EinnahmenTextblock.Text = _zinsRechner.GetRueckgezahlteBetraegeFuerZeitraum(heute).ToString();
         }
 
+        private bool IstDatumAusgewaehlt(DateTime? startDatum, DateTime? endDatum)
+        {
+            return startDatum != null && endDatum != null;
+        }
+
         private bool IstStartdatumKleinerGleichEnddatum()
         {
             return EinnahmeVonDatePicker.SelectedDate.Value.Date <= EinnahmenBisDatePicker.SelectedDate.Value.Date;
@@ -102,7 +96,7 @@ namespace Geldverleih.UI
         {
             IList<Kunde> kunden = _kundenUebersichtPresenter.AlleKundenAuslesen();
 
-            
+
             KundenDataGrid.ItemsSource = kunden;
         }
 
@@ -129,7 +123,7 @@ namespace Geldverleih.UI
                 Kunde ausgewaehlterKunde = (Kunde)KundenDataGrid.SelectedItem;
 
                 IKundeDetailView kundeDetailView = new KundeDetailansicht();
-                KundeDetailPresenter kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
+                var kundeDetailPresenter = new KundeDetailPresenter(_kundenService, kundeDetailView, _bankPresenter, _zinssatzFactory);
 
                 kundeDetailPresenter.KundeBearbeitenDetailView(ausgewaehlterKunde);
                 KundenUebersichtAktualisieren();

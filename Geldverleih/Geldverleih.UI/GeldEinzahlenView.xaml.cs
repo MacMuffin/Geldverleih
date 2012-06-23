@@ -49,6 +49,7 @@ namespace Geldverleih.UI
             try
             {
                 _bankPresenter.GeldEinzahlen(_vorgangsNummer, Convert.ToDecimal(EinzahlbetragTextbox.Text));
+                Aktualisieren();
             }
             catch (Exception exception)
             {

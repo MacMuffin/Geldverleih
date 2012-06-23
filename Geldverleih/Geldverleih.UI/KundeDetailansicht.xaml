@@ -28,7 +28,18 @@
             </TabItem>
             <TabItem Header="Ausleihvorgänge" Name="AusleihvorgaengeTab" RequestBringIntoView="AusleihvorgaengeTab_RequestBringIntoView">
                 <Grid>
-                    <DataGrid AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="-1,151,0,0" Name="AusleihvorgaengeKundeGrid" Width="417" />
+                    <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="-1,151,0,0" Name="AusleihvorgaengeKundeGrid" Width="417">
+                        <DataGrid.Resources>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Control.Background" Value="#5FBA27" />
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=Datum}" Header="Datum" MinWidth="100"/>
+                            <DataGridTextColumn Binding="{Binding Path=Betrag}" Header="Betrag" MinWidth="100"/>
+                            <DataGridTextColumn Binding="{Binding Path=ZinsSatz}" Header="ZinsSatz" MinWidth="120"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
                     <Button Content="Betrag Ausleihen" Height="38" HorizontalAlignment="Left" Margin="313,102,0,0" Name="AusleihenButton" VerticalAlignment="Top" Width="103" Click="AusleihenButton_Click" />
                     <ComboBox Height="23" HorizontalAlignment="Left" Margin="0,110,0,0" Name="ZinssatzComboBox" VerticalAlignment="Top" Width="120" SelectedIndex="1" />
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="174,110,0,0" Name="LeihbetragTextbox" VerticalAlignment="Top" Width="120" />

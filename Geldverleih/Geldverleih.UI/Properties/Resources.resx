@@ -114,4 +114,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="BankPresenter_GeldAusleihen_Dieser_Kunde_existiert_nicht_Message">
+		<value xml:space="preserve">Dieser Kunde existiert nicht.</value>
+	</data>
+	<data name="BankPresenter_GetAlleAusleihvorgaengeByKundenNummer_Ausleihvorgänge_zum_Kunden_können_nicht_ausgelesen_werden__da_die_KundenNummer_ungültig_ist">
+		<value xml:space="preserve">Ausleihvorgänge zum Kunden können nicht ausgelesen werden, da die KundenNummer ungültig ist.</value>
+	</data>
+	<data name="BankPresenter_GetAlleEingezahltenVorgaengeZurVorgangsNummer_Eingezahlten_Vorgänge_können_nicht_ausgelesen_werde__da_die_Vorgangsnummer_ungültig_ist">
+		<value xml:space="preserve">Eingezahlten Vorgänge können nicht ausgelesen werde, da die Vorgangsnummer ungültig ist.</value>
+	</data>
+	<data name="MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Message">
+		<value xml:space="preserve">Das Startdatum kann nicht später beginnen wie das Enddatum.</value>
+	</data>
+	<data name="MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Caption">
+		<value xml:space="preserve">Enddatum und Startdatum ist vertauscht.</value>
+	</data>
+	<data name="MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Message">
+		<value xml:space="preserve">Kein Datum ausgewählt!</value>
+	</data>
+	<data name="MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Caption">
+		<value xml:space="preserve">Bitte Datum auswählen.</value>
+	</data>
 </root>

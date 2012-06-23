@@ -3,68 +3,125 @@
 //     Dieser Code wurde von einem Tool generiert.
 //     Laufzeitversion:4.0.30319.269
 //
-//     Änderungen an dieser Datei können fehlerhaftes Verhalten verursachen und gehen verloren, wenn
-//     der Code neu generiert wird.
+//     Änderungen an dieser Datei können falsches Verhalten verursachen und gehen verloren, wenn
+//     der Code erneut generiert wird.
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Geldverleih.UI.Properties
-{
-
-
+namespace Geldverleih.UI.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
     /// </summary>
-    // Diese Klasse wurde von der StronglyTypedResourceBuilder-Klasse
-    // über ein Tool wie ResGen oder Visual Studio automatisch generiert.
+    // Diese Klasse wurde von der StronglyTypedResourceBuilder automatisch generiert
+    // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
-    // mit der Option /str erneut aus, oder erstellen Sie Ihr VS-Projekt neu.
+    // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Geldverleih.UI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-        ///   Ressourcenlookups, die diese stark typisierte Ressourcenklasse verwenden.
+        ///   Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dieser Kunde existiert nicht. ähnelt.
+        /// </summary>
+        internal static string BankPresenter_GeldAusleihen_Dieser_Kunde_existiert_nicht_Message {
+            get {
+                return ResourceManager.GetString("BankPresenter_GeldAusleihen_Dieser_Kunde_existiert_nicht_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ausleihvorgänge zum Kunden können nicht ausgelesen werden, da die KundenNummer ungültig ist. ähnelt.
+        /// </summary>
+        internal static string BankPresenter_GetAlleAusleihvorgaengeByKundenNummer_Ausleihvorgänge_zum_Kunden_können_nicht_ausgelesen_werden__da_die_KundenNummer_ungültig_ist {
+            get {
+                return ResourceManager.GetString("BankPresenter_GetAlleAusleihvorgaengeByKundenNummer_Ausleihvorgänge_zum_Kunden_kö" +
+                        "nnen_nicht_ausgelesen_werden__da_die_KundenNummer_ungültig_ist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Eingezahlten Vorgänge können nicht ausgelesen werde, da die Vorgangsnummer ungültig ist. ähnelt.
+        /// </summary>
+        internal static string BankPresenter_GetAlleEingezahltenVorgaengeZurVorgangsNummer_Eingezahlten_Vorgänge_können_nicht_ausgelesen_werde__da_die_Vorgangsnummer_ungültig_ist {
+            get {
+                return ResourceManager.GetString("BankPresenter_GetAlleEingezahltenVorgaengeZurVorgangsNummer_Eingezahlten_Vorgänge" +
+                        "_können_nicht_ausgelesen_werde__da_die_Vorgangsnummer_ungültig_ist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enddatum und Startdatum ist vertauscht. ähnelt.
+        /// </summary>
+        internal static string MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Caption {
+            get {
+                return ResourceManager.GetString("MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Das Startdatum kann nicht später beginnen wie das Enddatum. ähnelt.
+        /// </summary>
+        internal static string MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Message {
+            get {
+                return ResourceManager.GetString("MainWindow_StatistikAktualisieren_EndUndStartdatumVertauscht_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bitte Datum auswählen. ähnelt.
+        /// </summary>
+        internal static string MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Caption {
+            get {
+                return ResourceManager.GetString("MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Kein Datum ausgewählt! ähnelt.
+        /// </summary>
+        internal static string MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Message {
+            get {
+                return ResourceManager.GetString("MainWindow_StatistikAktualisieren_KeinDatumAusgewaehlt_Message", resourceCulture);
             }
         }
     }

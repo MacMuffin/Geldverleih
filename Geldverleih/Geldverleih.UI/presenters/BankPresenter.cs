@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Geldverleih.Domain;
 using Geldverleih.Service.interfaces;
 using Geldverleih.UI.Logik;
+using Geldverleih.UI.Properties;
 using Geldverleih.UI.views;
-using log4net;
 
 namespace Geldverleih.UI.presenters
 {
@@ -14,12 +12,17 @@ namespace Geldverleih.UI.presenters
     {
         private readonly IBankService _bankService;
         private readonly IZinsRechner _zinsRechner;
-        private readonly IEinzahlungsView _einzahlungsView;
+        private IEinzahlungsView _einzahlungsView;
 
-        public BankPresenter(IBankService bankService, IZinsRechner zinsRechner, IEinzahlungsView einzahlungsView)
+        public BankPresenter(IBankService bankService, IZinsRechner zinsRechner)
         {
             _bankService = bankService;
             _zinsRechner = zinsRechner;
+        }
+
+
+        public void EinzahlungsViewFestlegen(IEinzahlungsView einzahlungsView)
+        {
             _einzahlungsView = einzahlungsView;
         }
 
@@ -50,13 +53,9 @@ namespace Geldverleih.UI.presenters
             else
             {
                 if (einzahlResult.EinzahlvorgangErfolgreich)
-                {
                     message = string.Format("Danke für Ihre einzahlungen. Sie haben noch {0}€ zu zahlen.",
-                                        einzahlResult.Restbetrag);
-                }
-
+                                            einzahlResult.Restbetrag);
                 else
-                {
                     switch (einzahlResult.Error)
                     {
                         case EinzahlError.VorgangBereitsBezahlt:
@@ -66,7 +65,6 @@ namespace Geldverleih.UI.presenters
                             message = "Dieser Vorgang existiert nicht mehr!";
                             break;
                     }
-                }
             }
 
             _einzahlungsView.EinzahlungAbgeschlossenResult(message);
@@ -74,7 +72,7 @@ namespace Geldverleih.UI.presenters
 
         public EinzahlResult EingezahltenBetragVomZuZahlendenBetragAbziehen(decimal zuZahlenderBetrag, decimal eingezahlterBetrag, Guid vorgangsNummer)
         {
-            if (zuZahlenderBetrag == 0.0m)
+            if (IstBetragAbgezahlt(zuZahlenderBetrag))
                 return EinzahlResult.EinzahlvorgangFehlerhaft(EinzahlError.VorgangBereitsBezahlt);
 
             decimal restBetrag = zuZahlenderBetrag - eingezahlterBetrag;
@@ -91,10 +89,15 @@ namespace Geldverleih.UI.presenters
             return EinzahlResult.EinzahlungenErfolgreich(restBetrag);
         }
 
+        private bool IstBetragAbgezahlt(decimal zuZahlenderBetrag)
+        {
+            return zuZahlenderBetrag == 0.0m;
+        }
+
         public void GeldAusleihen(Kunde kunde, VerleihKondition kondition, decimal betrag)
         {
             if (kunde == null)
-                throw new ArgumentNullException("kunde", "Dieser Kunde existiert nicht.");
+                throw new ArgumentNullException("kunde", Resources.BankPresenter_GeldAusleihen_Dieser_Kunde_existiert_nicht_Message);
 
             _bankService.GeldAusleihen(kunde.Kundennummer, kondition, betrag);
         }
@@ -106,20 +109,25 @@ namespace Geldverleih.UI.presenters
 
         public IList<AusleihVorgang> GetAlleAusleihvorgaengeByKundenNummer(Guid kundenNummer)
         {
-            if (kundenNummer == Guid.Empty)
+            if (!IstIdGueltig(kundenNummer))
                 throw new ArgumentNullException("kundenNummer",
-                                                "Ausleihvorgänge zum Kunden können nicht ausgelesen werden, da die KundenNummer ungültig ist.");
+                                                Resources.BankPresenter_GetAlleAusleihvorgaengeByKundenNummer_Ausleihvorgänge_zum_Kunden_können_nicht_ausgelesen_werden__da_die_KundenNummer_ungültig_ist);
 
             return _bankService.GetAlleAusleihvorgaengeByKundenNummer(kundenNummer);
         }
 
         public IList<RueckzahlVorgang> GetAlleEingezahltenVorgaengeZurVorgangsNummer(Guid vorgangsNummer)
         {
-            if (vorgangsNummer == Guid.Empty)
+            if (!IstIdGueltig(vorgangsNummer))
                 throw new ArgumentNullException("vorgangsNummer",
-                    "Eingezahlten Vorgänge können nicht ausgelesen werde, da die Vorgangsnummer ungültig ist.");
+                    Resources.BankPresenter_GetAlleEingezahltenVorgaengeZurVorgangsNummer_Eingezahlten_Vorgänge_können_nicht_ausgelesen_werde__da_die_Vorgangsnummer_ungültig_ist);
 
             return _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
+        }
+
+        private bool IstIdGueltig(Guid id)
+        {
+            return id != Guid.Empty;
         }
     }
 }
