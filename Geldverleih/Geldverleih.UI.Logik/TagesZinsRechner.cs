@@ -82,15 +82,17 @@ namespace Geldverleih.UI.Logik
                 .Where(ausleihVorgang => ausleihVorgang.Datum.Date <= zeitSpanne.EndDatum.Date).ToList();
 
             decimal eingenommenZinsen = 0m;
-            int days = GetDays(zeitSpanne.EndDatum, zeitSpanne.EndDatum);
+            int days = GetDays(zeitSpanne.EndDatum, zeitSpanne.StartDatum);
 
             foreach (AusleihVorgang ausleihVorgang in alleAusleihvorgaenge)
             {
+                decimal ausgeliehenerBetrag = ausleihVorgang.Betrag;
+
                 for (int tage = 0; tage <= days; tage++)
                 {
-                    decimal betragMitZinsenFuerZeitraumBerechnen = GetBetrag(zeitSpanne.StartDatum.AddDays(tage), ausleihVorgang.Betrag, ausleihVorgang.VorgangsNummer);
-
-                    eingenommenZinsen += DreisatzAnwenden(betragMitZinsenFuerZeitraumBerechnen, ausleihVorgang.ZinsSatz);
+                    decimal zuZahlenderBetragFuerTag = GetBetrag(zeitSpanne.StartDatum.AddDays(tage), ausgeliehenerBetrag, ausleihVorgang.VorgangsNummer);
+                    eingenommenZinsen += DreisatzAnwenden(zuZahlenderBetragFuerTag, ausleihVorgang.ZinsSatz);
+                    ausgeliehenerBetrag = zuZahlenderBetragFuerTag + eingenommenZinsen;
                 }
             }
 
