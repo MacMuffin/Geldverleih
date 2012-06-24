@@ -79,10 +79,14 @@ namespace Geldverleih.UI.Logik
         public decimal GetEingenommeneZinsenImZeitraum(ZeitSpanne zeitSpanne)
         {
             IList<AusleihVorgang> alleAusleihvorgaenge = _bankService.GetAlleAusleihvorgaenge()
-                .Where(ausleihVorgang => ausleihVorgang.Datum.Date <= zeitSpanne.EndDatum.Date).ToList();
+                .Where(ausleihVorgang => ausleihVorgang.Datum.Date <= zeitSpanne.EndDatum.Date).OrderBy(ausleihvorgang => ausleihvorgang.Datum).ToList();
+
+            if (alleAusleihvorgaenge.Count == 0)
+                return 0.0m;
 
             decimal eingenommenZinsen = 0m;
-            int days = GetDays(zeitSpanne.EndDatum, zeitSpanne.StartDatum);
+            AusleihVorgang fruehsterAusleihvorgang = alleAusleihvorgaenge.First();
+            int days = GetDays(zeitSpanne.EndDatum, fruehsterAusleihvorgang.Datum);
 
             foreach (AusleihVorgang ausleihVorgang in alleAusleihvorgaenge)
             {
@@ -90,7 +94,7 @@ namespace Geldverleih.UI.Logik
 
                 for (int tage = 0; tage <= days; tage++)
                 {
-                    decimal zuZahlenderBetragFuerTag = GetBetrag(zeitSpanne.StartDatum.AddDays(tage), ausgeliehenerBetrag, ausleihVorgang.VorgangsNummer);
+                    decimal zuZahlenderBetragFuerTag = GetBetrag(fruehsterAusleihvorgang.Datum.AddDays(tage), ausgeliehenerBetrag, ausleihVorgang.VorgangsNummer);
                     eingenommenZinsen += DreisatzAnwenden(zuZahlenderBetragFuerTag, ausleihVorgang.ZinsSatz);
                     ausgeliehenerBetrag = zuZahlenderBetragFuerTag + eingenommenZinsen;
                 }

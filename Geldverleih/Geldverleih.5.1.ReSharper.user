@@ -32,23 +32,15 @@
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:Properties/f:Resources.resx" caret="0" fromTop="0" />
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:RueckzahlVorgang.cs" caret="67" fromTop="3" />
       <File id="169EB44A-664C-4300-9FCA-5C6525389F9F/f:AusleihVorgang.cs" caret="349" fromTop="9" />
-      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="2748" fromTop="16" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:RueckzahlRepository.cs" caret="630" fromTop="17" />
-      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:RepositoryBase.cs" caret="1871" fromTop="24" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:KundenrepositoryTest.cs" caret="457" fromTop="16" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:TagesZinsRechnerTest.cs" caret="671" fromTop="19" />
-      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="190" fromTop="0" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="1024" fromTop="15" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:RepositoryBase.cs" caret="1871" fromTop="24" />
+      <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="2296" fromTop="18" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3467" fromTop="82" />
+      <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/f:RueckzahlRepository.cs" caret="536" fromTop="15" />
     </RecentFiles>
     <RecentEdits>
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:BankPresenter.cs" caret="5071" fromTop="23" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="3132" fromTop="28" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="5274" fromTop="22" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="2770" fromTop="25" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="3512" fromTop="39" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="5417" fromTop="19" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="2440" fromTop="20" />
-      <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="71" fromTop="1" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="1205" fromTop="22" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="752" fromTop="4" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml.cs" caret="4863" fromTop="26" />
@@ -71,6 +63,14 @@
       <File id="C0408460-75D0-460E-8AB0-2EB5C523FF92/f:BankService.cs" caret="2714" fromTop="16" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="1023" fromTop="15" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="1024" fromTop="15" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="2064" fromTop="37" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="964" fromTop="19" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="1338" fromTop="24" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="907" fromTop="17" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3941" fromTop="24" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3849" fromTop="14" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3542" fromTop="23" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="4076" fromTop="33" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -93,7 +93,7 @@
       <Item value="leihVereinbarung" priority="0" />
       <Item value="class" priority="15" />
       <Item value="prop" priority="32" />
-      <Item value="Guid`0" priority="25" />
+      <Item value="Guid`0" priority="26" />
       <Item value="kunde" priority="22" />
       <Item value="VerleihKondition`0" priority="1" />
       <Item value="verleihKondition" priority="8" />
@@ -130,7 +130,7 @@
       <Item value="TestMethod" priority="1" />
       <Item value="KundenRepository`0" priority="1" />
       <Item value="virtual" priority="10" />
-      <Item value="vorgangsNummer" priority="24" />
+      <Item value="vorgangsNummer" priority="25" />
       <Item value="string" priority="15" />
       <Item value="int" priority="6" />
       <Item value="KundenAnlegen`0" priority="0" />
@@ -190,7 +190,7 @@
       <Item value="RepositoryBase" priority="1" />
       <Item value="DateTime`0" priority="16" />
       <Item value="AusleihVorgang`0" priority="8" />
-      <Item value="ausleihVorgang" priority="25" />
+      <Item value="ausleihVorgang" priority="28" />
       <Item value="_factory" priority="1" />
       <Item value="AusleihVorgang" priority="4" />
       <Item value="Betrag" priority="3" />
@@ -264,13 +264,13 @@
       <Item value="false" priority="2" />
       <Item value="tatsaechlichZuZahlenderBetrag" priority="0" />
       <Item value="zinsRechner" priority="6" />
-      <Item value="zeitSpanne" priority="20" />
+      <Item value="zeitSpanne" priority="23" />
       <Item value="timeSpan" priority="0" />
       <Item value="TagesZinsRechner`0" priority="1" />
       <Item value="ZeitSpanne" priority="3" />
       <Item value="EndDatum" priority="2" />
-      <Item value="for" priority="1" />
-      <Item value="days" priority="2" />
+      <Item value="for" priority="2" />
+      <Item value="days" priority="3" />
       <Item value="startDatum" priority="2" />
       <Item value="ausleihTag" priority="1" />
       <Item value="rueckzahlVorgaenge" priority="0" />
@@ -352,9 +352,9 @@
       <Item value="ausleihvorgaengeZumDatum" priority="1" />
       <Item value="date" priority="1" />
       <Item value="BetragMitZinsenFuerZeitraumBerechnen`0" priority="0" />
-      <Item value="eingenommenZinsen" priority="1" />
+      <Item value="eingenommenZinsen" priority="2" />
       <Item value="DreisatzAnwenden`0" priority="0" />
-      <Item value="betragMitZinsenFuerZeitraumBerechnen" priority="0" />
+      <Item value="betragMitZinsenFuerZeitraumBerechnen" priority="1" />
       <Item value="EinnahmenTextblock" priority="1" />
       <Item value="ausgezahlterBetrag" priority="1" />
       <Item value="VerliehenesGeldTextblock" priority="0" />
@@ -371,6 +371,10 @@
       <Item value="e" priority="1" />
       <Item value="Char`0" priority="0" />
       <Item value="First`1" priority="0" />
+      <Item value="GetBetrag`0" priority="0" />
+      <Item value="tage" priority="0" />
+      <Item value="zuZahlenderBetragFuerTag" priority="1" />
+      <Item value="ausgeliehenerBetrag" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Guid">
       <Item value="NewGuid`0" priority="6" />
@@ -479,8 +483,8 @@
       <Item value="EinzahlungsViewFestlegen`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Geldverleih.Domain.AusleihVorgang">
-      <Item value="VorgangsNummer" priority="4" />
-      <Item value="Betrag" priority="3" />
+      <Item value="VorgangsNummer" priority="5" />
+      <Item value="Betrag" priority="4" />
       <Item value="ZinsSatz" priority="2" />
       <Item value="Datum" priority="8" />
     </ItemStatistics>
@@ -551,7 +555,7 @@
     <ItemStatistics item="Qualified:System.DateTime">
       <Item value="AddYears`0" priority="0" />
       <Item value="Subtract`0" priority="1" />
-      <Item value="AddDays`0" priority="1" />
+      <Item value="AddDays`0" priority="2" />
       <Item value="Date" priority="22" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.TimeSpan">
@@ -636,8 +640,8 @@
       <Item value="Message" priority="12" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Geldverleih.UI.Logik.ZeitSpanne">
-      <Item value="EndDatum" priority="5" />
-      <Item value="StartDatum" priority="3" />
+      <Item value="EndDatum" priority="7" />
+      <Item value="StartDatum" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="ToList`1" priority="4" />
