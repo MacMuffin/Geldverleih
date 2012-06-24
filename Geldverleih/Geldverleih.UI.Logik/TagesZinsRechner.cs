@@ -22,19 +22,19 @@ namespace Geldverleih.UI.Logik
             decimal zuZahlenderBetrag = 0m;
 
             IList<RueckzahlVorgang> rueckzahlVorgaenge = _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
-            IEnumerable<RueckzahlVorgang> rueckzahlungenFuerDatum;
 
             if (days == 0)
-            {
-                rueckzahlungenFuerDatum = rueckzahlVorgaenge.Where(rueckzahlVorgang => DatumIstGleich(rueckzahlVorgang, startDatum));
-                betrag = rueckzahlungenFuerDatum.Aggregate(betrag, (current, rueckzahlVorgang) => current - rueckzahlVorgang.Betrag);
-            }
+                betrag = GetBetrag(startDatum, betrag, vorgangsNummer);
             else
             {
                 for (int ausleihTag = 1; ausleihTag <= days; ausleihTag++)
                 {
-                    rueckzahlungenFuerDatum = rueckzahlVorgaenge.Where(rueckzahlVorgang => DatumIstGleich(rueckzahlVorgang, startDatum.AddDays(ausleihTag)));
-                    betrag = rueckzahlungenFuerDatum.Aggregate(betrag, (current, rueckzahlVorgang) => current - rueckzahlVorgang.Betrag);
+                    IEnumerable<RueckzahlVorgang> rueckzahlungenFuerDatum =
+                        rueckzahlVorgaenge.Where(
+                            rueckzahlVorgang => DatumIstGleich(rueckzahlVorgang, startDatum.AddDays(ausleihTag)));
+                    betrag = rueckzahlungenFuerDatum.Aggregate(betrag,
+                                                               (current, rueckzahlVorgang) =>
+                                                               current - rueckzahlVorgang.Betrag);
 
                     decimal tagesZinsen = DreisatzAnwenden(betrag, zinsSatz);
 
@@ -49,6 +49,15 @@ namespace Geldverleih.UI.Logik
 
 
             return zuZahlenderBetrag;
+        }
+
+        private decimal GetBetrag(DateTime startDatum, decimal betrag, Guid vorgangsNummer)
+        {
+            IList<RueckzahlVorgang> rueckzahlVorgaenge = _bankService.GetAlleRueckzahlvorgaengeByVorgangsNummer(vorgangsNummer);
+            IEnumerable<RueckzahlVorgang> rueckzahlungenFuerDatum;
+            rueckzahlungenFuerDatum = rueckzahlVorgaenge.Where(rueckzahlVorgang => DatumIstGleich(rueckzahlVorgang, startDatum));
+            betrag = rueckzahlungenFuerDatum.Aggregate(betrag, (current, rueckzahlVorgang) => current - rueckzahlVorgang.Betrag);
+            return betrag;
         }
 
         private int GetDays(DateTime endDatum, DateTime startDatum)
@@ -70,17 +79,19 @@ namespace Geldverleih.UI.Logik
         public decimal GetEingenommeneZinsenImZeitraum(ZeitSpanne zeitSpanne)
         {
             IList<AusleihVorgang> alleAusleihvorgaenge = _bankService.GetAlleAusleihvorgaenge()
-                .Where(ausleihVorgang => ausleihVorgang.Datum.Date <= zeitSpanne.EndDatum.Date && ausleihVorgang.Datum.Date >= zeitSpanne.StartDatum.Date).ToList();
+                .Where(ausleihVorgang => ausleihVorgang.Datum.Date <= zeitSpanne.EndDatum.Date).ToList();
 
             decimal eingenommenZinsen = 0m;
+            int days = GetDays(zeitSpanne.EndDatum, zeitSpanne.EndDatum);
 
             foreach (AusleihVorgang ausleihVorgang in alleAusleihvorgaenge)
             {
-                decimal betragMitZinsenFuerZeitraumBerechnen = BetragMitZinsenFuerZeitraumBerechnen(ausleihVorgang.Betrag, ausleihVorgang.ZinsSatz,
-                                                                                                    ausleihVorgang.VorgangsNummer,
-                                                                                                    zeitSpanne);
+                for (int tage = 0; tage <= days; tage++)
+                {
+                    decimal betragMitZinsenFuerZeitraumBerechnen = GetBetrag(zeitSpanne.StartDatum.AddDays(tage), ausleihVorgang.Betrag, ausleihVorgang.VorgangsNummer);
 
-                eingenommenZinsen += DreisatzAnwenden(betragMitZinsenFuerZeitraumBerechnen, ausleihVorgang.ZinsSatz);
+                    eingenommenZinsen += DreisatzAnwenden(betragMitZinsenFuerZeitraumBerechnen, ausleihVorgang.ZinsSatz);
+                }
             }
 
             return eingenommenZinsen;
