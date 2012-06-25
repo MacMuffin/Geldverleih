@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1623fae3-fbbf-4d39-81f2-93752e9c4566" name="Andy@ANDY-PC 2012-06-25 20:29:26" runUser="Andy-PC\Andy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="1e8110a4-fe86-41b2-aba8-127e0f01dea9">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Andy_ANDY-PC 2012-06-25 20_29_26">
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih\bin\Debug\Geldverleih.Repository.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Tests\bin\Debug\Microsoft.Practices.Unity.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Domain\bin\Debug\Geldverleih.Domain.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Service\bin\Debug\Geldverleih.Service.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI\bin\Debug\Geldverleih.UI.exe" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.UI.Logik\bin\Debug\Geldverleih.UI.Logik.dll" />
+      <DeploymentItem filename="E:\Git\Schule\GeldVerleih\Geldverleih\Geldverleih.Unity\bin\Debug\Geldverleih.Unity.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-25T20:29:26.6052020+02:00" queuing="2012-06-25T20:29:26.6182027+02:00" start="2012-06-25T20:29:26.6322035+02:00" finish="2012-06-25T20:29:27.1632339+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GeldEinzahlungVomKundenKannVorgenommenWerden" storage="e:\git\schule\geldverleih\geldverleih\geldverleih.tests\bin\debug\geldverleih.tests.dll" id="25ebba42-0170-f3da-6235-b9fcc336abbb">
+      <Execution id="fdbcbe55-c1e6-40a1-91fb-2b8df397c27f" />
+      <TestMethod codeBase="E:/Git/Schule/GeldVerleih/Geldverleih/Geldverleih.Tests/bin/Debug/Geldverleih.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Geldverleih.Tests.BankserviceTest, Geldverleih.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GeldEinzahlungVomKundenKannVorgenommenWerden" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="25ebba42-0170-f3da-6235-b9fcc336abbb" executionId="fdbcbe55-c1e6-40a1-91fb-2b8df397c27f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="fdbcbe55-c1e6-40a1-91fb-2b8df397c27f" testId="25ebba42-0170-f3da-6235-b9fcc336abbb" testName="GeldEinzahlungVomKundenKannVorgenommenWerden" computerName="ANDY-PC" duration="00:00:00.2595307" startTime="2012-06-25T20:29:26.6402040+02:00" endTime="2012-06-25T20:29:27.1472330+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fdbcbe55-c1e6-40a1-91fb-2b8df397c27f">
+    </UnitTestResult>
+  </Results>
+</TestRun>
