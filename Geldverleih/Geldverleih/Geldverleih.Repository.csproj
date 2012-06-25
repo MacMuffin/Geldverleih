@@ -68,7 +68,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="mappings\Kunde.hbm.xml" />
+    <EmbeddedResource Include="mappings\Kunde.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mappings\AusleihVorgang.hbm.xml" />

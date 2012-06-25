@@ -95,8 +95,9 @@ namespace Geldverleih.UI.Logik
                 for (int tage = 0; tage <= days; tage++)
                 {
                     decimal zuZahlenderBetragFuerTag = GetBetrag(fruehsterAusleihvorgang.Datum.AddDays(tage), ausgeliehenerBetrag, ausleihVorgang.VorgangsNummer);
-                    eingenommenZinsen += DreisatzAnwenden(zuZahlenderBetragFuerTag, ausleihVorgang.ZinsSatz);
-                    ausgeliehenerBetrag = zuZahlenderBetragFuerTag + eingenommenZinsen;
+                    decimal zinsenFuerTag = DreisatzAnwenden(zuZahlenderBetragFuerTag, ausleihVorgang.ZinsSatz);
+                    eingenommenZinsen += zinsenFuerTag;
+                    ausgeliehenerBetrag = zuZahlenderBetragFuerTag + zinsenFuerTag;
                 }
             }
 
