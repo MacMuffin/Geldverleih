@@ -45,7 +45,7 @@ namespace Geldverleih.Tests
             using (_mockRepository.Record())
             {
                 Expect.Call(() => bankmanager.GeldAusleihen(kunde.Kundennummer, verleihKondition, betrag));
-                //Expect.Call(() => ausleihRepository.GeldAnKundenAusleihen(factory.CreateAusleihVorgangObject(kunde.Kundennummer, verleihKondition, betrag)));
+                Expect.Call(() => ausleihRepository.GeldAnKundenAusleihen(factory.CreateAusleihVorgangObject(kunde.Kundennummer, verleihKondition, betrag)));
             }
 
             _mockRepository.ReplayAll();
@@ -67,7 +67,6 @@ namespace Geldverleih.Tests
             //Das wird gebraucht, um die konkrete implementation vom Bankservice zu testen
             IBankService bankService = new BankService(ausleihRepository, rueckzahlReppository, kundenRepository,
                                                        factory);
-
             
             Guid vorgangsNummer = Guid.NewGuid();
 
@@ -82,10 +81,8 @@ namespace Geldverleih.Tests
                     .Return(rueckzahlVorgang);
                 Expect.Call(() => rueckzahlReppository.KundeZahltGeldEin(rueckzahlVorgang));
             }
-
             //Es soll alles wiedergegeben werden.
             _mockRepository.ReplayAll();
-
             //Wiedergabe wurde gestartet
             bankService.GeldEinzahlen(vorgangsNummer, (decimal) 5.5);
 
