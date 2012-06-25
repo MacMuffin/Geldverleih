@@ -92,7 +92,7 @@ namespace Geldverleih.UI.Logik
             {
                 decimal ausgeliehenerBetrag = ausleihVorgang.Betrag;
 
-                for (int tage = 0; tage <= days; tage++)
+                for (int tage = 1; tage <= days; tage++)
                 {
                     decimal zuZahlenderBetragFuerTag = GetBetrag(fruehsterAusleihvorgang.Datum.AddDays(tage), ausgeliehenerBetrag, ausleihVorgang.VorgangsNummer);
                     decimal zinsenFuerTag = DreisatzAnwenden(zuZahlenderBetragFuerTag, ausleihVorgang.ZinsSatz);

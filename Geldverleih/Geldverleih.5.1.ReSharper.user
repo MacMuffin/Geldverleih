@@ -24,7 +24,6 @@
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/d:presenters/f:BankPresenter.cs" caret="777" fromTop="17" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:GeldEinzahlenView.xaml.cs" caret="0" fromTop="0" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:KundeDetailansicht.xaml.cs" caret="0" fromTop="0" />
-      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3681" fromTop="17" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="4148" fromTop="18" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:KundenrepositoryTest.cs" caret="457" fromTop="16" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:TagesZinsRechnerTest.cs" caret="671" fromTop="19" />
@@ -39,6 +38,7 @@
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="3844" fromTop="28" />
       <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:mappings/f:RueckzahlVorgang.hbm.xml" caret="546" fromTop="12" />
       <File id="DCE288BA-22C3-4590-8F1E-0134A6760EFF/d:mappings/f:Kunde.hbm.xml" caret="599" fromTop="14" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3766" fromTop="16" />
     </RecentFiles>
     <RecentEdits>
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:KundeDetailansicht.xaml" caret="3641" fromTop="11" />
@@ -61,7 +61,6 @@
       <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="4071" fromTop="14" />
       <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3534" fromTop="23" />
       <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="3649" fromTop="20" />
-      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="4105" fromTop="29" />
       <File id="70373D92-854F-4AC0-B0EA-6F90E4363791/f:MainWindow.xaml" caret="4148" fromTop="18" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1184" fromTop="10" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="1329" fromTop="13" />
@@ -71,6 +70,7 @@
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="2968" fromTop="5" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="3531" fromTop="18" />
       <File id="E53494D1-C70D-49A4-917C-02472B49F95F/f:BankserviceTest.cs" caret="3752" fromTop="24" />
+      <File id="97A35116-8F4A-43B9-BE23-6B13A3648656/f:TagesZinsRechner.cs" caret="4428" fromTop="27" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
